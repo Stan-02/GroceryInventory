@@ -59,7 +59,7 @@ namespace InventorySystemGrocery
             try
             {
                 connect.Open();
-                command = new SqlCommand("select * from tblAccount where UserName = @UserName and Password = @Password", connect);
+                command = new SqlCommand("select * from tblAccount where UserName = @username and Password = @password", connect);
                 command.Parameters.AddWithValue("@UserName", username.Text);
                 command.Parameters.AddWithValue("@Password", password.Text);
 
@@ -69,8 +69,8 @@ namespace InventorySystemGrocery
 
                 if (reader.HasRows)
                 {
-                    _username = reader["UserName"].ToString();
-                    _password = reader["Password"].ToString();
+                    _username = reader["username"].ToString();
+                    _password = reader["password"].ToString();
 
                     found = true;
                 }
@@ -79,12 +79,15 @@ namespace InventorySystemGrocery
                     found = true;
                 }
 
-                if (found == true)
+                if (username.Text == _username && password.Text == _password)
                 {
-                    MessageBox.Show(_username, "Access granted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Logging in", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     username.Clear();
                     password.Clear();
                     this.Hide();
+                    dashboard main = new dashboard();
+                    main.Show();
+                    
                     
                     
 
@@ -92,7 +95,7 @@ namespace InventorySystemGrocery
                 else
                 {
                     MessageBox.Show("Invalid username or password ", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                   
+                    connect.Close();
                 }
             }
             catch(Exception ex)
