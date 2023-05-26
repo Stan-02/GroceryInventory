@@ -21,5 +21,57 @@ namespace InventorySystemGrocery
         {
 
         }
+
+        private void btnupMinimize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Minimized;
+            }
+            else if (WindowState == FormWindowState.Minimized)
+            {
+                WindowState = FormWindowState.Normal;
+            }
+            else if (WindowState == FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void btnupEnlarge_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else if (WindowState == FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void btnupExit_Click(object sender, EventArgs e)
+        {
+            DialogResult logout;
+            logout = MessageBox.Show("Do you want to log out?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (logout == DialogResult.Yes)
+            {
+                this.Dispose();
+                Login form = new Login();
+                form.Show();
+
+            }
+            else
+            {
+                this.Show();
+
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            forTimer.Text = DateTime.Now.ToString("dd-MMM-YYYY hh-mm tt");
+        }
     }
 }

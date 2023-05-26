@@ -34,3 +34,16 @@ C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\
 C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.csproj.CoreCompileInputs.cache
 C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.exe
 C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.pdb
+C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\bin\Debug\InventorySystemGrocery.exe.config
+C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\bin\Debug\InventorySystemGrocery.exe
+C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\bin\Debug\InventorySystemGrocery.pdb
+C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.csproj.AssemblyReference.cache
+C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.csproj.SuggestedBindingRedirects.cache
+C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.dashboard.resources
+C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.Login.resources
+C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.Properties.Resources.resources
+C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.Settings.resources
+C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.csproj.GenerateResource.cache
+C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.csproj.CoreCompileInputs.cache
+C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.exe
+C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.pdb
