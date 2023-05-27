@@ -47,3 +47,16 @@ C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debu
 C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.csproj.CoreCompileInputs.cache
 C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.exe
 C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.pdb
+C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\bin\Debug\InventorySystemGrocery.exe.config
+C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\bin\Debug\InventorySystemGrocery.exe
+C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\bin\Debug\InventorySystemGrocery.pdb
+C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.csproj.AssemblyReference.cache
+C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.csproj.SuggestedBindingRedirects.cache
+C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.dashboard.resources
+C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.Login.resources
+C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.Properties.Resources.resources
+C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.Settings.resources
+C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.csproj.GenerateResource.cache
+C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.csproj.CoreCompileInputs.cache
+C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.exe
+C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.pdb

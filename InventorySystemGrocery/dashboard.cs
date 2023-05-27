@@ -71,7 +71,17 @@ namespace InventorySystemGrocery
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            forTimer.Text = DateTime.Now.ToString("dd-MMM-YYYY hh-mm tt");
+            Settings setdate = new Settings();
+            forTimer.Text = DateTime.Now.ToString("dd-MMM-yyyy hh:mm:ss tt");
+           //setdate.
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            Settings settfrm = new Settings() { TopLevel = false, TopMost = true };
+            //settfrm.FormBorderStyle = (FormBorderStyle)cboFormStyle.SelectedIndex;
+            this.pnAllform.Controls.Add(settfrm);
+            settfrm.Show();
         }
     }
 }

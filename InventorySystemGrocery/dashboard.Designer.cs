@@ -38,11 +38,12 @@
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnupMinimize = new System.Windows.Forms.Button();
-            this.btnupEnlarge = new System.Windows.Forms.Button();
-            this.btnupExit = new System.Windows.Forms.Button();
             this.forTimer = new System.Windows.Forms.Label();
+            this.btnupExit = new System.Windows.Forms.Button();
+            this.btnupEnlarge = new System.Windows.Forms.Button();
+            this.btnupMinimize = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pnAllform = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -141,6 +142,7 @@
             this.btnSettings.Text = "    Settings";
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // btnHome
             // 
@@ -167,36 +169,22 @@
             this.panel2.Controls.Add(this.btnupEnlarge);
             this.panel2.Controls.Add(this.btnupMinimize);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel2.Location = new System.Drawing.Point(161, 0);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(162, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(641, 25);
+            this.panel2.Size = new System.Drawing.Size(638, 25);
             this.panel2.TabIndex = 1;
             // 
-            // btnupMinimize
+            // forTimer
             // 
-            this.btnupMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnupMinimize.FlatAppearance.BorderSize = 0;
-            this.btnupMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnupMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnupMinimize.Image")));
-            this.btnupMinimize.Location = new System.Drawing.Point(548, 8);
-            this.btnupMinimize.Name = "btnupMinimize";
-            this.btnupMinimize.Size = new System.Drawing.Size(25, 25);
-            this.btnupMinimize.TabIndex = 5;
-            this.btnupMinimize.UseVisualStyleBackColor = true;
-            this.btnupMinimize.Click += new System.EventHandler(this.btnupMinimize_Click);
-            // 
-            // btnupEnlarge
-            // 
-            this.btnupEnlarge.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnupEnlarge.FlatAppearance.BorderSize = 0;
-            this.btnupEnlarge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnupEnlarge.Image = ((System.Drawing.Image)(resources.GetObject("btnupEnlarge.Image")));
-            this.btnupEnlarge.Location = new System.Drawing.Point(579, 1);
-            this.btnupEnlarge.Name = "btnupEnlarge";
-            this.btnupEnlarge.Size = new System.Drawing.Size(25, 25);
-            this.btnupEnlarge.TabIndex = 4;
-            this.btnupEnlarge.UseVisualStyleBackColor = true;
-            this.btnupEnlarge.Click += new System.EventHandler(this.btnupEnlarge_Click);
+            this.forTimer.AutoSize = true;
+            this.forTimer.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forTimer.ForeColor = System.Drawing.Color.White;
+            this.forTimer.Location = new System.Drawing.Point(264, 5);
+            this.forTimer.Name = "forTimer";
+            this.forTimer.Size = new System.Drawing.Size(41, 16);
+            this.forTimer.TabIndex = 2;
+            this.forTimer.Text = "label1";
             // 
             // btnupExit
             // 
@@ -204,28 +192,51 @@
             this.btnupExit.FlatAppearance.BorderSize = 0;
             this.btnupExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnupExit.Image = ((System.Drawing.Image)(resources.GetObject("btnupExit.Image")));
-            this.btnupExit.Location = new System.Drawing.Point(608, 1);
+            this.btnupExit.Location = new System.Drawing.Point(605, 1);
             this.btnupExit.Name = "btnupExit";
             this.btnupExit.Size = new System.Drawing.Size(25, 24);
             this.btnupExit.TabIndex = 3;
             this.btnupExit.UseVisualStyleBackColor = true;
             this.btnupExit.Click += new System.EventHandler(this.btnupExit_Click);
             // 
-            // forTimer
+            // btnupEnlarge
             // 
-            this.forTimer.AutoSize = true;
-            this.forTimer.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forTimer.ForeColor = System.Drawing.Color.White;
-            this.forTimer.Location = new System.Drawing.Point(14, 5);
-            this.forTimer.Name = "forTimer";
-            this.forTimer.Size = new System.Drawing.Size(41, 16);
-            this.forTimer.TabIndex = 2;
-            this.forTimer.Text = "label1";
+            this.btnupEnlarge.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnupEnlarge.FlatAppearance.BorderSize = 0;
+            this.btnupEnlarge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnupEnlarge.Image = ((System.Drawing.Image)(resources.GetObject("btnupEnlarge.Image")));
+            this.btnupEnlarge.Location = new System.Drawing.Point(576, 1);
+            this.btnupEnlarge.Name = "btnupEnlarge";
+            this.btnupEnlarge.Size = new System.Drawing.Size(25, 25);
+            this.btnupEnlarge.TabIndex = 4;
+            this.btnupEnlarge.UseVisualStyleBackColor = true;
+            this.btnupEnlarge.Click += new System.EventHandler(this.btnupEnlarge_Click);
+            // 
+            // btnupMinimize
+            // 
+            this.btnupMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnupMinimize.FlatAppearance.BorderSize = 0;
+            this.btnupMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnupMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnupMinimize.Image")));
+            this.btnupMinimize.Location = new System.Drawing.Point(545, 8);
+            this.btnupMinimize.Name = "btnupMinimize";
+            this.btnupMinimize.Size = new System.Drawing.Size(25, 25);
+            this.btnupMinimize.TabIndex = 5;
+            this.btnupMinimize.UseVisualStyleBackColor = true;
+            this.btnupMinimize.Click += new System.EventHandler(this.btnupMinimize_Click);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pnAllform
+            // 
+            this.pnAllform.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnAllform.Location = new System.Drawing.Point(162, 25);
+            this.pnAllform.Name = "pnAllform";
+            this.pnAllform.Size = new System.Drawing.Size(638, 425);
+            this.pnAllform.TabIndex = 2;
             // 
             // dashboard
             // 
@@ -233,6 +244,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.pnAllform);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -261,5 +273,6 @@
         private System.Windows.Forms.Button btnupEnlarge;
         private System.Windows.Forms.Label forTimer;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel pnAllform;
     }
 }
