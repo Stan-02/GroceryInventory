@@ -60,3 +60,4 @@ C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\Inve
 C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.csproj.CoreCompileInputs.cache
 C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.exe
 C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.pdb
+C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.Settings.resources

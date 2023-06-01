@@ -53,18 +53,21 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 77);
+            this.panel1.Size = new System.Drawing.Size(1176, 118);
             this.panel1.TabIndex = 3;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Rockwell", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(307, 18);
+            this.label1.Location = new System.Drawing.Point(460, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 47);
+            this.label1.Size = new System.Drawing.Size(314, 70);
             this.label1.TabIndex = 4;
             this.label1.Text = "SETTINGS";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -72,9 +75,10 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(65, 162);
+            this.dateTimePicker1.Location = new System.Drawing.Point(98, 249);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(412, 35);
+            this.dateTimePicker1.Size = new System.Drawing.Size(616, 48);
             this.dateTimePicker1.TabIndex = 4;
             // 
             // label2
@@ -82,9 +86,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Rockwell", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label2.Location = new System.Drawing.Point(57, 103);
+            this.label2.Location = new System.Drawing.Point(86, 158);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(277, 47);
+            this.label2.Size = new System.Drawing.Size(426, 70);
             this.label2.TabIndex = 5;
             this.label2.Text = "Date and Time";
             // 
@@ -92,9 +97,10 @@
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(483, 162);
+            this.dateTimePicker2.Location = new System.Drawing.Point(724, 249);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 35);
+            this.dateTimePicker2.Size = new System.Drawing.Size(298, 48);
             this.dateTimePicker2.TabIndex = 6;
             // 
             // label3
@@ -102,33 +108,37 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Rockwell", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label3.Location = new System.Drawing.Point(57, 217);
+            this.label3.Location = new System.Drawing.Point(86, 334);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(243, 47);
+            this.label3.Size = new System.Drawing.Size(372, 70);
             this.label3.TabIndex = 7;
             this.label3.Text = "Backup Files";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 20);
+            this.textBox1.Location = new System.Drawing.Point(18, 31);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 20);
+            this.textBox1.Size = new System.Drawing.Size(314, 26);
             this.textBox1.TabIndex = 10;
             // 
             // btnBrowse
             // 
-            this.btnBrowse.Location = new System.Drawing.Point(229, 20);
+            this.btnBrowse.Location = new System.Drawing.Point(344, 31);
+            this.btnBrowse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowse.Size = new System.Drawing.Size(112, 35);
             this.btnBrowse.TabIndex = 11;
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.UseVisualStyleBackColor = true;
             // 
             // btnRestore
             // 
-            this.btnRestore.Location = new System.Drawing.Point(229, 49);
+            this.btnRestore.Location = new System.Drawing.Point(344, 75);
+            this.btnRestore.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRestore.Name = "btnRestore";
-            this.btnRestore.Size = new System.Drawing.Size(75, 23);
+            this.btnRestore.Size = new System.Drawing.Size(112, 35);
             this.btnRestore.TabIndex = 12;
             this.btnRestore.Text = "Backup";
             this.btnRestore.UseVisualStyleBackColor = true;
@@ -138,35 +148,40 @@
             this.groupBox1.Controls.Add(this.btnRestore);
             this.groupBox1.Controls.Add(this.btnBrowse);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(65, 280);
+            this.groupBox1.Location = new System.Drawing.Point(98, 431);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(322, 98);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(483, 151);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Backup Database";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(11, 19);
+            this.textBox2.Location = new System.Drawing.Point(16, 29);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(211, 20);
+            this.textBox2.Size = new System.Drawing.Size(314, 26);
             this.textBox2.TabIndex = 13;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(228, 16);
+            this.button2.Location = new System.Drawing.Point(342, 25);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(112, 35);
             this.button2.TabIndex = 14;
             this.button2.Text = "Browse";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(228, 45);
+            this.button3.Location = new System.Drawing.Point(342, 69);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(112, 35);
             this.button3.TabIndex = 15;
             this.button3.Text = "Restore";
             this.button3.UseVisualStyleBackColor = true;
@@ -176,18 +191,20 @@
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Location = new System.Drawing.Point(428, 280);
+            this.groupBox2.Location = new System.Drawing.Point(642, 431);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(322, 97);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(483, 149);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Restore Database";
             // 
             // Settings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 411);
+            this.ClientSize = new System.Drawing.Size(1176, 632);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -197,6 +214,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Settings";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

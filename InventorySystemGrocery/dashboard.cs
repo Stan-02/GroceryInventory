@@ -12,16 +12,28 @@ namespace InventorySystemGrocery
 {
     public partial class dashboard : Form
     {
+        
         public dashboard()
         {
             InitializeComponent();
+            
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        public void load_form(object form)
         {
+            if (this.mainpanel.Controls.Count > 0)
+                this.mainpanel.Controls.RemoveAt(0);
+
+            Form f = form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.mainpanel.Controls.Add(f);
+            this.mainpanel.Tag = f;
+            f.Show();
+
+
 
         }
-
         private void btnupMinimize_Click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
@@ -72,16 +84,13 @@ namespace InventorySystemGrocery
         private void timer1_Tick(object sender, EventArgs e)
         {
             Settings setdate = new Settings();
-            forTimer.Text = DateTime.Now.ToString("dd-MMM-yyyy hh:mm:ss tt");
-           //setdate.
+            forTimer.Text = DateTime.Now.ToString("dd MMM yyyy hh:mm:ss tt");
+          
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            Settings settfrm = new Settings() { TopLevel = false, TopMost = true };
-            //settfrm.FormBorderStyle = (FormBorderStyle)cboFormStyle.SelectedIndex;
-            this.pnAllform.Controls.Add(settfrm);
-            settfrm.Show();
+            load_form(new Settings());
         }
     }
 }
