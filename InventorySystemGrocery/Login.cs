@@ -46,10 +46,7 @@ namespace InventorySystemGrocery
         }
 
        
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit(); 
-        }
+    
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -103,6 +100,12 @@ namespace InventorySystemGrocery
                 connect.Close();
                 MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Do you want to exit application? ", "Application", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            Application.Exit();
         }
     }
 }

@@ -12,13 +12,14 @@ namespace InventorySystemGrocery
 {
     public partial class dashboard : Form
     {
+        purchaseHistory ph = new purchaseHistory();
         
         public dashboard()
         {
             InitializeComponent();
             
         }
-
+        //load form to main panel
         public void load_form(object form)
         {
             if (this.mainpanel.Controls.Count > 0)
@@ -91,6 +92,21 @@ namespace InventorySystemGrocery
         private void btnSettings_Click(object sender, EventArgs e)
         {
             load_form(new Settings());
+        }
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            load_form(new Inventory());
+        }
+
+        private void btnPurchase_Click(object sender, EventArgs e)
+        {
+            load_form(new Purchase());
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            load_form(new purchaseHistory());
         }
     }
 }

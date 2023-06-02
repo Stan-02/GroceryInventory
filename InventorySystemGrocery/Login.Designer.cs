@@ -139,7 +139,7 @@
             this.close.Size = new System.Drawing.Size(36, 29);
             this.close.TabIndex = 35;
             this.close.UseVisualStyleBackColor = false;
-            this.close.Click += new System.EventHandler(this.button1_Click);
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // panel2
             // 
