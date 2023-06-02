@@ -12,7 +12,7 @@ namespace InventorySystemGrocery
 {
     public partial class dashboard : Form
     {
-        purchaseHistory ph = new purchaseHistory();
+       
         
         public dashboard()
         {
@@ -96,17 +96,22 @@ namespace InventorySystemGrocery
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-            load_form(new Inventory());
+            load_form(new StockIN());
         }
 
         private void btnPurchase_Click(object sender, EventArgs e)
         {
-            load_form(new Purchase());
+            load_form(new Register());
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            load_form(new purchaseHistory());
+            load_form(new ProductStock());
+        }
+
+        private void btnSales_Click(object sender, EventArgs e)
+        {
+            load_form(new StockOut());
         }
     }
 }

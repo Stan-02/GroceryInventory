@@ -1,6 +1,6 @@
 ﻿namespace InventorySystemGrocery
 {
-    partial class Sales
+    partial class StockOut
     {
         /// <summary>
         /// Required designer variable.
@@ -37,10 +37,12 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkCyan;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(640, 70);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(987, 118);
+            this.panel1.TabIndex = 4;
             // 
             // label1
             // 
@@ -48,20 +50,22 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Rockwell", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(267, 12);
+            this.label1.Location = new System.Drawing.Point(365, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 47);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "SALES";
+            this.label1.Size = new System.Drawing.Size(285, 70);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Stock Out";
             // 
-            // Sales
+            // StockOut
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(638, 425);
+            this.ClientSize = new System.Drawing.Size(987, 569);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Sales";
+            this.Name = "StockOut";
+            this.Text = "StockOut";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

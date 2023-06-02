@@ -1,6 +1,6 @@
 ﻿namespace InventorySystemGrocery
 {
-    partial class Inventory
+    partial class StockIN
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockIN));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,11 +58,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Rockwell", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Turquoise;
-            this.label1.Location = new System.Drawing.Point(97, 228);
+            this.label1.Location = new System.Drawing.Point(71, 245);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 70);
-            this.label1.TabIndex = 11;
+            this.label1.TabIndex = 15;
             // 
             // panel2
             // 
@@ -73,7 +73,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1154, 118);
-            this.panel2.TabIndex = 13;
+            this.panel2.TabIndex = 16;
             // 
             // label2
             // 
@@ -84,10 +84,9 @@
             this.label2.Location = new System.Drawing.Point(424, 25);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(371, 70);
+            this.label2.Size = new System.Drawing.Size(307, 70);
             this.label2.TabIndex = 4;
-            this.label2.Text = "INVENTORY";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Text = "STOCK IN";
             // 
             // panel3
             // 
@@ -99,7 +98,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 118);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1154, 585);
-            this.panel3.TabIndex = 14;
+            this.panel3.TabIndex = 17;
             // 
             // button1
             // 
@@ -197,6 +196,7 @@
             this.Column1.HeaderText = "No.";
             this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
+            this.Column1.Width = 150;
             // 
             // Column2
             // 
@@ -238,18 +238,17 @@
             this.Column5.Name = "Column5";
             this.Column5.Width = 120;
             // 
-            // Inventory
+            // StockIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1154, 703);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Inventory";
+            this.Name = "StockIN";
+            this.Text = "StockIN";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -262,6 +261,7 @@
         }
 
         #endregion
+
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;

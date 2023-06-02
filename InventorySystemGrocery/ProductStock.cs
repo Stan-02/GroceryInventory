@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace InventorySystemGrocery
 {
-    public partial class Inventory : Form
+    public partial class ProductStock : Form
     {
-        public Inventory()
+        public ProductStock()
         {
             InitializeComponent();
-        }
-
-        private void DGVinventory_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

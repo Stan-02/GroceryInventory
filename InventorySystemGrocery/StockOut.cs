@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace InventorySystemGrocery
 {
-    public partial class Sales : Form
+    public partial class StockOut : Form
     {
-        public Sales()
+        public StockOut()
         {
             InitializeComponent();
         }
