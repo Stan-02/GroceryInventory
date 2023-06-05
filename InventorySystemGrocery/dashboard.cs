@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,8 +14,22 @@ namespace InventorySystemGrocery
 {
     public partial class dashboard : Form
     {
+        private bool dragging;
+        private Point offset;
        
-        
+         private void dashboard_MouseMove(object sender, MouseEventHandler e)
+            {
+                if (dragging)
+                {
+                    Point currentScreen = PointToScreen(e.Location);
+                    Location = new Point(currentScreen.X, currentScreen.Y - Offset.Y);
+                }
+            }
+        private void dashboard_MouseMove(object sender, MouseEventHandler e)
+            {
+                dragging = false;
+                
+            }
         public dashboard()
         {
             InitializeComponent();
@@ -33,7 +49,7 @@ namespace InventorySystemGrocery
             f.Show();
 
 
-
+       
         }
         private void btnupMinimize_Click(object sender, EventArgs e)
         {
@@ -96,7 +112,7 @@ namespace InventorySystemGrocery
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-            load_form(new StockIN());
+            load_form(new ProductStock());
         }
 
         private void btnPurchase_Click(object sender, EventArgs e)
@@ -106,7 +122,7 @@ namespace InventorySystemGrocery
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            load_form(new ProductStock());
+            
         }
 
         private void btnSales_Click(object sender, EventArgs e)

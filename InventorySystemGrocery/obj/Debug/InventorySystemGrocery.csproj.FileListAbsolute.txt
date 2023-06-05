@@ -66,3 +66,6 @@ C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\
 C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.StockOut.resources
 C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.ProductStock.resources
 C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.StockIN.resources
+C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.ProductStock.resources
+C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.Register.resources
+C:\Users\STI\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.StockOut.resources

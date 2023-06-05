@@ -78,17 +78,17 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="StockIN.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StockIN.Designer.cs">
-      <DependentUpon>StockIN.cs</DependentUpon>
-    </Compile>
     <Compile Include="StockOut.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StockOut.Designer.cs">
       <DependentUpon>StockOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockOutHistory.Designer.cs">
+      <DependentUpon>StockOutHistory.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
@@ -113,9 +113,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StockIN.resx">
-      <DependentUpon>StockIN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StockOut.resx">
       <DependentUpon>StockOut.cs</DependentUpon>

@@ -26,7 +26,6 @@ namespace InventorySystemGrocery
         {
             txtProductCode.Clear();
             txtProductDesc.Clear();
-            txtCategory.Clear();
             txtQuantity.Clear();
             txtPrice.Clear();
         }
@@ -37,6 +36,11 @@ namespace InventorySystemGrocery
             int serialCode = rndCode.Next();
 
             txtProductCode.Text = serialCode.ToString();
+        }
+
+        private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
