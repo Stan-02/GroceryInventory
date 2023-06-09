@@ -74,3 +74,5 @@ C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debu
 C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.StockOutHistory.resources
 C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.AddCategory.resources
 C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.CategoryList.resources
+C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.AddCategory.resources
+C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.CategoryList.resources
