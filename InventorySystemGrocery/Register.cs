@@ -17,6 +17,8 @@ namespace InventorySystemGrocery
         SqlConnection connect = new SqlConnection();
         SqlCommand command = new SqlCommand();
         DatabaseConnection dbcon = new DatabaseConnection();
+        SqlDataReader reader;
+
         //ProductStock prod_list;
 
         public Register()
@@ -47,11 +49,6 @@ namespace InventorySystemGrocery
             txtProductCode.Text = serialCode.ToString();
         }
 
-        private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
@@ -63,24 +60,27 @@ namespace InventorySystemGrocery
                 }*/
                 if (MessageBox.Show("Are you sure you want to add this product?", "Adding Product", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
+                   
+
+                    connect.Open();
                     command = new SqlCommand("INSERT INTO Product(ProductCode, ProductDesc, Category, Quantity, Price, Date, ExpDate) VALUES (@productCode, @productDesc, @categoryName, @price, @quantity, @date, @expDate)", connect);
                     command.Parameters.AddWithValue("@productCode", txtProductCode.Text);
                     command.Parameters.AddWithValue("@productDesc", txtProductDesc.Text);
-                    command.Parameters.AddWithValue("@categoryName", cbCategory.Text);
+                    command.Parameters.AddWithValue("@categoryName", cbCategory.SelectedItem);
                     command.Parameters.AddWithValue("@price", Convert.ToInt32(txtPrice.Text));
                     command.Parameters.AddWithValue("@quantity", Convert.ToInt32(txtQuantity));
                     command.Parameters.AddWithValue("@date", dtpRegDate.Text);
                     command.Parameters.AddWithValue("@expDate", dtpExpiration.Text);
 
-                    connect.Open();
                     command.ExecuteNonQuery();
                     connect.Close();
                     
                     MessageBox.Show("Item Added");
                     Clear();
                 }
-               
-                
+
+            
+
             }
             catch (Exception ex)
             {
@@ -95,5 +95,13 @@ namespace InventorySystemGrocery
             txtQuantity.Clear();
             txtPrice.Clear();
         }
+
+        private void btnAddCategory_Click_1(object sender, EventArgs e)
+        {
+            AddCategory add_cat = new AddCategory();
+            add_cat.Show();
+        }
+
+
     }
 }
