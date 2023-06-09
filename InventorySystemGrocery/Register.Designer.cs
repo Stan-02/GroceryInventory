@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.btnStock = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -47,6 +48,7 @@
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dtpExpiration = new System.Windows.Forms.DateTimePicker();
+            this.btnAddCategory = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -241,14 +243,6 @@
             this.cbCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Items.AddRange(new object[] {
-            "Canned Goods",
-            "Frozen Foods",
-            "Snacks",
-            "Condiments & Spices",
-            "Beverages",
-            "Personal Care",
-            "Fruits & Veggies"});
             this.cbCategory.Location = new System.Drawing.Point(199, 205);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(237, 28);
@@ -275,11 +269,27 @@
             this.dtpExpiration.Size = new System.Drawing.Size(200, 20);
             this.dtpExpiration.TabIndex = 38;
             // 
+            // btnAddCategory
+            // 
+            this.btnAddCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddCategory.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCategory.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAddCategory.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCategory.Image")));
+            this.btnAddCategory.Location = new System.Drawing.Point(437, 199);
+            this.btnAddCategory.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddCategory.Name = "btnAddCategory";
+            this.btnAddCategory.Size = new System.Drawing.Size(35, 38);
+            this.btnAddCategory.TabIndex = 39;
+            this.btnAddCategory.UseVisualStyleBackColor = false;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 428);
+            this.Controls.Add(this.btnAddCategory);
             this.Controls.Add(this.dtpExpiration);
             this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.label7);
@@ -299,7 +309,7 @@
             this.Controls.Add(this.txtProductCode);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Register";
             this.Text = "Register";
             this.panel1.ResumeLayout(false);
@@ -330,5 +340,6 @@
         private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dtpExpiration;
+        private System.Windows.Forms.Button btnAddCategory;
     }
 }

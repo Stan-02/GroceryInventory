@@ -14,22 +14,7 @@ namespace InventorySystemGrocery
 {
     public partial class dashboard : Form
     {
-        private bool dragging;
-        private Point offset;
-       
-         private void dashboard_MouseMove(object sender, MouseEventHandler e)
-            {
-                if (dragging)
-                {
-                    Point currentScreen = PointToScreen(e.Location);
-                    Location = new Point(currentScreen.X, currentScreen.Y - Offset.Y);
-                }
-            }
-        private void dashboard_MouseMove(object sender, MouseEventHandler e)
-            {
-                dragging = false;
-                
-            }
+        
         public dashboard()
         {
             InitializeComponent();
