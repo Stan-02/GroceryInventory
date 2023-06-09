@@ -63,20 +63,20 @@ namespace InventorySystemGrocery
 
                 reader = command.ExecuteReader();
                 reader.Read();
-
-                if (reader.HasRows)
+               
+                /*if (reader.HasRows)
                 {
                     _username = reader["username"].ToString();
-                    _password = reader["password"].ToString();
+                _password = reader["password"].ToString();
 
                     found = true;
                 }
                 else
                 {
                     found = true;
-                }
+                }*/
 
-                if (username.Text == _username && password.Text == _password)
+                if (username.Text == _username && password.Text == _password) 
                 {
                     MessageBox.Show("Logging in", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     username.Clear();
@@ -84,8 +84,20 @@ namespace InventorySystemGrocery
                     this.Hide();
                     dashboard main = new dashboard();
                     main.Show();
+
+                    //MessageBox.Show("Invalid username or password", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     
-                    
+
+                    //MessageBox.Show("Empty field! ", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    connect.Close();
+
+
+                }
+                else if(username.Text == " " && password.Text == " ")
+                {
+                    MessageBox.Show("Empty field! ", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    connect.Close();
+                    //MessageBox.Show("Invalid username or password", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     
 
                 }
@@ -93,6 +105,12 @@ namespace InventorySystemGrocery
                 {
                     MessageBox.Show("Invalid username or password ", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     connect.Close();
+                    /*MessageBox.Show("Logging in", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    username.Clear();
+                    password.Clear();
+                    this.Hide();
+                    dashboard main = new dashboard();
+                    main.Show();*/
                 }
             }
             catch(Exception ex)
