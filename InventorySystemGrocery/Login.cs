@@ -57,8 +57,8 @@ namespace InventorySystemGrocery
             {
                 connect.Open();
                 command = new SqlCommand("select * from tblAccount where UserName = @username and Password = @password", connect);
-                command.Parameters.AddWithValue("@UserName", username.Text);
-                command.Parameters.AddWithValue("@Password", password.Text);
+                command.Parameters.AddWithValue("@userName", username.Text);
+                command.Parameters.AddWithValue("@password", password.Text);
 
 
                 reader = command.ExecuteReader();
@@ -93,7 +93,7 @@ namespace InventorySystemGrocery
 
 
                 }
-                else if(username.Text == " " && password.Text == " ")
+                else if ((username.Text == string.Empty) || (password.Text == string.Empty))
                 {
                     MessageBox.Show("Empty field! ", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     connect.Close();

@@ -50,6 +50,8 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVPurchaseHist)).BeginInit();
             this.panel2.SuspendLayout();
@@ -62,18 +64,20 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(529, 18);
+            this.label2.Location = new System.Drawing.Point(752, 28);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 42);
+            this.label2.Size = new System.Drawing.Size(267, 64);
             this.label2.TabIndex = 23;
             this.label2.Text = "Inventory";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(41, 9);
+            this.textBox1.Location = new System.Drawing.Point(62, 14);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(327, 26);
+            this.textBox1.Size = new System.Drawing.Size(488, 35);
             this.textBox1.TabIndex = 12;
             this.textBox1.Text = "Search";
             // 
@@ -83,9 +87,10 @@
             this.purchaseSearch.FlatAppearance.BorderSize = 0;
             this.purchaseSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.purchaseSearch.Image = ((System.Drawing.Image)(resources.GetObject("purchaseSearch.Image")));
-            this.purchaseSearch.Location = new System.Drawing.Point(4, 3);
+            this.purchaseSearch.Location = new System.Drawing.Point(6, 5);
+            this.purchaseSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.purchaseSearch.Name = "purchaseSearch";
-            this.purchaseSearch.Size = new System.Drawing.Size(31, 37);
+            this.purchaseSearch.Size = new System.Drawing.Size(46, 57);
             this.purchaseSearch.TabIndex = 12;
             this.purchaseSearch.UseVisualStyleBackColor = true;
             // 
@@ -97,9 +102,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button1.Location = new System.Drawing.Point(1261, 96);
+            this.button1.Location = new System.Drawing.Point(1808, 148);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(69, 27);
+            this.button1.Size = new System.Drawing.Size(104, 42);
             this.button1.TabIndex = 22;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = false;
@@ -109,9 +115,10 @@
             this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(1157, 99);
+            this.dateTimePicker2.Location = new System.Drawing.Point(1652, 152);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(98, 24);
+            this.dateTimePicker2.Size = new System.Drawing.Size(145, 33);
             this.dateTimePicker2.TabIndex = 21;
             // 
             // dateTimePicker1
@@ -119,9 +126,10 @@
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1053, 101);
+            this.dateTimePicker1.Location = new System.Drawing.Point(1496, 155);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(98, 24);
+            this.dateTimePicker1.Size = new System.Drawing.Size(145, 33);
             this.dateTimePicker1.TabIndex = 19;
             // 
             // label1
@@ -129,9 +137,10 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(969, 102);
+            this.label1.Location = new System.Drawing.Point(1370, 157);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 20);
+            this.label1.Size = new System.Drawing.Size(110, 29);
             this.label1.TabIndex = 20;
             this.label1.Text = "By Date:";
             // 
@@ -140,10 +149,9 @@
             this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Controls.Add(this.DGVPurchaseHist);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 130);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 200);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1353, 469);
+            this.panel1.Size = new System.Drawing.Size(1946, 722);
             this.panel1.TabIndex = 20;
             // 
             // DGVPurchaseHist
@@ -169,7 +177,9 @@
             this.Column6,
             this.Column5,
             this.Column7,
-            this.Column8});
+            this.Column8,
+            this.Edit,
+            this.Delete});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,12 +191,14 @@
             this.DGVPurchaseHist.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVPurchaseHist.EnableHeadersVisualStyles = false;
             this.DGVPurchaseHist.Location = new System.Drawing.Point(0, 0);
+            this.DGVPurchaseHist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DGVPurchaseHist.Name = "DGVPurchaseHist";
             this.DGVPurchaseHist.RowHeadersVisible = false;
             this.DGVPurchaseHist.RowHeadersWidth = 62;
             this.DGVPurchaseHist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVPurchaseHist.Size = new System.Drawing.Size(1353, 469);
+            this.DGVPurchaseHist.Size = new System.Drawing.Size(1946, 722);
             this.DGVPurchaseHist.TabIndex = 17;
+            this.DGVPurchaseHist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVPurchaseHist_CellContentClick);
             // 
             // panel2
             // 
@@ -199,8 +211,9 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1353, 130);
+            this.panel2.Size = new System.Drawing.Size(1946, 200);
             this.panel2.TabIndex = 19;
             // 
             // panel3
@@ -208,9 +221,10 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.purchaseSearch);
-            this.panel3.Location = new System.Drawing.Point(9, 83);
+            this.panel3.Location = new System.Drawing.Point(14, 128);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(377, 41);
+            this.panel3.Size = new System.Drawing.Size(566, 63);
             this.panel3.TabIndex = 18;
             // 
             // Column1
@@ -271,17 +285,32 @@
             // Column8
             // 
             this.Column8.HeaderText = "Expiration Date";
+            this.Column8.MinimumWidth = 8;
             this.Column8.Name = "Column8";
+            this.Column8.Width = 150;
+            // 
+            // Edit
+            // 
+            this.Edit.HeaderText = "";
+            this.Edit.MinimumWidth = 8;
+            this.Edit.Name = "Edit";
+            this.Edit.Width = 150;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "";
+            this.Delete.MinimumWidth = 8;
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 150;
             // 
             // ProductStock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1353, 599);
+            this.ClientSize = new System.Drawing.Size(1946, 922);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ProductStock";
             this.Text = "ProductStock";
             this.panel1.ResumeLayout(false);
@@ -315,5 +344,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewImageColumn Edit;
+        private System.Windows.Forms.DataGridViewImageColumn Delete;
     }
 }

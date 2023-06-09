@@ -18,7 +18,7 @@ namespace InventorySystemGrocery
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new dashboard());
         }
 
 
@@ -28,7 +28,7 @@ namespace InventorySystemGrocery
     {
         public string connectdb()
         {
-            //string conn = @"Data Source=Jericho-Garcia;Initial Catalog=ISGroceryStore;Integrated Security=True";
+            string conn = @"Data Source=JERICHO-GARCIA;Initial Catalog=ISGroceryStore;Integrated Security=True";
             //string conn = @"Data Source = DESKTOP - VKHU5QN\SQLEXPRESS; Integrated Security = True";
             //string conn = @"Data Source=LAB-A-PC26\SQLEXPRESS;Initial Catalog=GroceryStore;Integrated Security=True";
             return conn;
