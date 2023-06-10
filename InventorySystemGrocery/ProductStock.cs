@@ -36,7 +36,7 @@ namespace InventorySystemGrocery
 
             while(reader.Read())
             {
-                i += 1;
+                i++;
                 DGVPurchaseHist.Rows.Add(i, reader["ProductCode"].ToString(), reader["ProductDesc"].ToString(), reader["Category"].ToString(), reader["Price"].ToString(), reader["Quantity"].ToString(), reader["Date"].ToString(), reader["ExpDate  "].ToString());
             }
             reader.Close();
