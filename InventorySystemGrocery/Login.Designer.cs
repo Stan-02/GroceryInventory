@@ -100,7 +100,7 @@
             this.clear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.clear.Name = "clear";
             this.clear.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.clear.Size = new System.Drawing.Size(156, 35);
+            this.clear.Size = new System.Drawing.Size(156, 57);
             this.clear.TabIndex = 7;
             this.clear.Text = "Clear";
             this.clear.UseVisualStyleBackColor = false;

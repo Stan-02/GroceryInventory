@@ -63,11 +63,11 @@ namespace InventorySystemGrocery
             }
             else if (colname == "Delete")
             {
-                if(MessageBox.Show("Are you want to delete this category?", "Delete Category", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes){
+                if(MessageBox.Show("Do you want to delete this category?", "Delete Category", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes){
                     connect.Open();
                     command = new SqlCommand("DELETE FROM Category WHERE CategoryID LIKE '" + DGVCategory.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", connect);
                     command.ExecuteNonQuery();
-                    connect.Open();
+                    connect.Close();
                     MessageBox.Show("Category has been successfully delete!");
                 }
             }

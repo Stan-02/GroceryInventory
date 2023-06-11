@@ -30,7 +30,7 @@ namespace InventorySystemGrocery
         {
             int i = 0;
             DGVinventory.Rows.Clear();
-            command = new SqlCommand("Select * from Product WHERE CONCAT(ProductCode,ProductDesc, CategoryName, Quantity, Price, Date, ExpDate) LIKE '%" + txtSearchProd.Text + "%'", connect);
+            command = new SqlCommand("Select * from Product WHERE CONCAT(ProductCode, ProductName, ProductDesc, CategoryName, Quantity, Price, Date, ExpDate) LIKE '%" + txtSearchProd.Text + "%'", connect);
             connect.Open();
             reader = command.ExecuteReader();
 
@@ -45,51 +45,24 @@ namespace InventorySystemGrocery
 
         int qty = 0;
 
-        private void DGVinventory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DGVinventory_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string colname = DGVinventory.Columns[e.ColumnIndex].Name;
-
-            if (colname == "Edit")
-            {
-                Register addprod = new Register();
-                //addprod.lblProductID.Text = DGVPurchaselist.Rows[e.RowIndex].Cells[1].Value.ToString();
-                addprod.txtProductCode.Text = DGVinventory.Rows[e.RowIndex].Cells[1].Value.ToString();
-                addprod.txtProductName.Text = DGVinventory.Rows[e.RowIndex].Cells[2].Value.ToString();
-                addprod.cbCategory.Text = DGVinventory.Rows[e.RowIndex].Cells[3].Value.ToString();
-                addprod.txtQuantity.Text = DGVinventory.Rows[e.RowIndex].Cells[4].Value.ToString();
-                addprod.txtPrice.Text = DGVinventory.Rows[e.RowIndex].Cells[5].Value.ToString();
-                addprod.dtpRegDate.Text = DGVinventory.Rows[e.RowIndex].Cells[6].Value.ToString();
-                addprod.dtpExpiration.Text = DGVinventory.Rows[e.RowIndex].Cells[7].Value.ToString();
-
-                addprod.btnAdd.Enabled = false;
-                //addprod.btnUpdate.Enabled = true;
-                addprod.ShowDialog();
-
-            }
-            else if (colname == "Delete")
-            {
-                if (MessageBox.Show("Are you want to delete this category?", "Delete Category", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    connect.Open();
-                    command = new SqlCommand("DELETE FROM Category WHERE ProductCode LIKE '" + DGVinventory.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", connect);
-                    command.ExecuteNonQuery();
-                    connect.Open();
-                    MessageBox.Show("Category has been successfully delete!");
-                }
-            }
-            viewItemList();
+            txtProdName.Text = DGVinventory.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtProdDesc.Text = DGVinventory.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtPrice.Text = DGVinventory.Rows[e.RowIndex].Cells[6].Value.ToString();
+            qty = Convert.ToInt32(DGVinventory.Rows[e.RowIndex].Cells[5].Value.ToString());
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        private void numericQty_ValueChanged(object sender, EventArgs e)
         {
-            /*if(Convert.ToInt32(nudQuantity.Value) > qty) 
+            if (Convert.ToInt32(numericQty.Value) > qty)
             {
                 MessageBox.Show("The Quantity is not enough!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                nudQuantity.Value = nudQuantity.Value - 1;
+                numericQty.Value = numericQty.Value - 1;
                 return;
             }
-            int total = Convert.ToInt32(txtPrice.Text) * Convert.ToInt32(nudQuantity.Value);
-            txtTotal.Text = total.ToString();*/
+            int total = Convert.ToInt32(txtPrice.Text) * Convert.ToInt32(numericQty.Value);
+            txtTotal.Text = total.ToString();
         }
 
         private void btnHistory_Click(object sender, EventArgs e)
@@ -100,9 +73,21 @@ namespace InventorySystemGrocery
 
         private void btnclear_Click(object sender, EventArgs e)
         {
-
+            Clear();
+        }
+        
+        public void Clear()
+        {
+            txtPrice.Clear();
+            txtProdDesc.Clear();
+            txtProdName.Clear();
+            txtTotal.Clear();
+            
         }
 
-        
+        private void txtSearchProd_TextChanged(object sender, EventArgs e)
+        {
+            viewItemList();
+        }
     }
 }

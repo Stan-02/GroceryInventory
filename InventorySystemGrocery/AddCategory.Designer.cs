@@ -107,10 +107,10 @@
             this.btnAddCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCat.ForeColor = System.Drawing.Color.White;
-            this.btnAddCat.Location = new System.Drawing.Point(251, 217);
+            this.btnAddCat.Location = new System.Drawing.Point(225, 217);
             this.btnAddCat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddCat.Name = "btnAddCat";
-            this.btnAddCat.Size = new System.Drawing.Size(84, 38);
+            this.btnAddCat.Size = new System.Drawing.Size(117, 38);
             this.btnAddCat.TabIndex = 34;
             this.btnAddCat.Text = "ADD";
             this.btnAddCat.UseVisualStyleBackColor = false;
@@ -123,10 +123,10 @@
             this.btnClearCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearCat.ForeColor = System.Drawing.Color.White;
-            this.btnClearCat.Location = new System.Drawing.Point(468, 218);
+            this.btnClearCat.Location = new System.Drawing.Point(495, 218);
             this.btnClearCat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClearCat.Name = "btnClearCat";
-            this.btnClearCat.Size = new System.Drawing.Size(94, 38);
+            this.btnClearCat.Size = new System.Drawing.Size(117, 38);
             this.btnClearCat.TabIndex = 35;
             this.btnClearCat.Text = "CLEAR";
             this.btnClearCat.UseVisualStyleBackColor = false;
@@ -152,7 +152,7 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(343, 218);
+            this.btnUpdate.Location = new System.Drawing.Point(361, 218);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(117, 38);

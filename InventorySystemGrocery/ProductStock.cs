@@ -32,7 +32,7 @@ namespace InventorySystemGrocery
         {
             int i = 0;
             DGVPurchaselist.Rows.Clear();
-            command = new SqlCommand("SELECT * FROM Product",connect);
+            command = new SqlCommand("SELECT * FROM Product ",connect);
             connect.Open();
             reader = command.ExecuteReader();
 
@@ -50,7 +50,7 @@ namespace InventorySystemGrocery
         {
             int i = 0;
             DGVPurchaselist.Rows.Clear();
-            command = new SqlCommand("SELECT * FROM Product WHERE CONCAT(ProductCode, ProductDesc, CategoryName, Quantity, Price, Date, ExpDate) LIKE '%" + txtSearch.Text +"%'" , connect);
+            command = new SqlCommand("SELECT * FROM Product WHERE CONCAT(ProductCode, ProductName, ProductDesc, CategoryName, Quantity, Price, Date, ExpDate) LIKE '%" + txtSearch.Text +"%'" , connect);
             connect.Open();
             reader = command.ExecuteReader();
 
@@ -77,8 +77,8 @@ namespace InventorySystemGrocery
                 addprod.cbCategory.Text = DGVPurchaselist.Rows[e.RowIndex].Cells[3].Value.ToString();
                 addprod.txtQuantity.Text = DGVPurchaselist.Rows[e.RowIndex].Cells[4].Value.ToString();
                 addprod.txtPrice.Text = DGVPurchaselist.Rows[e.RowIndex].Cells[5].Value.ToString();
-                addprod.dtpRegDate.Text = DGVPurchaselist.Rows[e.RowIndex].Cells[6].Value.ToString();
-                addprod.dtpExpiration.Text = DGVPurchaselist.Rows[e.RowIndex].Cells[7].Value.ToString();
+                addprod.dtpRegDate.Value = Convert.ToDateTime(DGVPurchaselist.Rows[e.RowIndex].Cells[6].Value.ToString());
+                addprod.dtpExpiration.Value = Convert.ToDateTime(DGVPurchaselist.Rows[e.RowIndex].Cells[7].Value.ToString());
 
                 addprod.btnAdd.Enabled = false;
                 //addprod.btnUpdate.Enabled = true;
@@ -87,16 +87,21 @@ namespace InventorySystemGrocery
             }
             else if (colname == "Delete")
             {
-                if (MessageBox.Show("do you want to delete this category?", "Delete Category", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("do you want to delete this Product?", "Delete Product", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     connect.Open();
-                    command = new SqlCommand("DELETE FROM Category WHERE ProductCode LIKE '" + DGVPurchaselist.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", connect);
+                    command = new SqlCommand("DELETE FROM Product WHERE ProductCode LIKE '" + DGVPurchaselist.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", connect);
                     command.ExecuteNonQuery();
-                    connect.Open();
-                    MessageBox.Show("Product has been successfully delete!");
+                    connect.Close();
+                    MessageBox.Show("Product Move to Achive!");
                 }
             }
             loadProduct();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            searchItems();
         }
     }
 }

@@ -48,7 +48,7 @@ namespace InventorySystemGrocery
                     
                         command.ExecuteNonQuery();
                         connect.Close();
-                        MessageBox.Show("Category has ben successfully added!");
+                        MessageBox.Show("Category has been successfully added!");
                         Clear();
 
                     }
@@ -75,25 +75,10 @@ namespace InventorySystemGrocery
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (MessageBox.Show("Are you sure you want to update this category?", "Updating Category", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    connect.Open();
-                    command = new SqlCommand("UPDATE Category SET CategoryName = @CategoryName WHERE CategoryID '" + lblCatID.Text + "'", connect);
-                    command.Parameters.AddWithValue("@CategoryName", txtCategory.Text);
-
-                    command.ExecuteNonQuery();
-                    connect.Close();
-                    MessageBox.Show("Category has ben successfully added!");
-                    Clear();
-
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            CategoryList catList = new CategoryList();
+            catList.Show();
+            //catList.loadCategory();
+            
         }
     }
 }
