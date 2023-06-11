@@ -39,6 +39,8 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCategory)).BeginInit();
@@ -49,9 +51,10 @@
             this.panel1.BackColor = System.Drawing.Color.DarkCyan;
             this.panel1.Controls.Add(this.btnCatExit);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Location = new System.Drawing.Point(-2, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(629, 63);
+            this.panel1.Size = new System.Drawing.Size(944, 97);
             this.panel1.TabIndex = 1;
             // 
             // btnCatExit
@@ -60,9 +63,10 @@
             this.btnCatExit.FlatAppearance.BorderSize = 0;
             this.btnCatExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCatExit.Image = ((System.Drawing.Image)(resources.GetObject("btnCatExit.Image")));
-            this.btnCatExit.Location = new System.Drawing.Point(605, 0);
+            this.btnCatExit.Location = new System.Drawing.Point(908, 0);
+            this.btnCatExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCatExit.Name = "btnCatExit";
-            this.btnCatExit.Size = new System.Drawing.Size(24, 23);
+            this.btnCatExit.Size = new System.Drawing.Size(36, 35);
             this.btnCatExit.TabIndex = 36;
             this.btnCatExit.UseVisualStyleBackColor = true;
             this.btnCatExit.Click += new System.EventHandler(this.btnCatExit_Click);
@@ -73,18 +77,20 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(187, 9);
+            this.label1.Location = new System.Drawing.Point(280, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(251, 42);
+            this.label1.Size = new System.Drawing.Size(370, 64);
             this.label1.TabIndex = 5;
             this.label1.Text = "Category List";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.DGVCategory);
-            this.panel2.Location = new System.Drawing.Point(-1, 63);
+            this.panel2.Location = new System.Drawing.Point(-2, 97);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(629, 319);
+            this.panel2.Size = new System.Drawing.Size(944, 491);
             this.panel2.TabIndex = 2;
             // 
             // DGVCategory
@@ -105,7 +111,9 @@
             this.DGVCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column3,
-            this.Column2});
+            this.Column2,
+            this.Edit,
+            this.Delete});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,12 +123,13 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGVCategory.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGVCategory.EnableHeadersVisualStyles = false;
-            this.DGVCategory.Location = new System.Drawing.Point(1, 0);
+            this.DGVCategory.Location = new System.Drawing.Point(2, 0);
+            this.DGVCategory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DGVCategory.Name = "DGVCategory";
             this.DGVCategory.RowHeadersVisible = false;
             this.DGVCategory.RowHeadersWidth = 62;
             this.DGVCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVCategory.Size = new System.Drawing.Size(629, 319);
+            this.DGVCategory.Size = new System.Drawing.Size(944, 491);
             this.DGVCategory.TabIndex = 18;
             this.DGVCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVCategory_CellContentClick);
             // 
@@ -150,15 +159,31 @@
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             // 
+            // Edit
+            // 
+            this.Edit.HeaderText = "";
+            this.Edit.MinimumWidth = 8;
+            this.Edit.Name = "Edit";
+            this.Edit.Width = 150;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "";
+            this.Delete.MinimumWidth = 8;
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 150;
+            // 
             // CategoryList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 382);
+            this.ClientSize = new System.Drawing.Size(942, 588);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CategoryList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -177,5 +202,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewImageColumn Edit;
+        private System.Windows.Forms.DataGridViewImageColumn Delete;
     }
 }

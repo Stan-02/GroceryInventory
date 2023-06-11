@@ -121,7 +121,7 @@
   <data name="btnAddCategory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAIAAAA3RD4GAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAAcFJREFUSEvtlTtLA1EQhf0rghEsAiIIdoIWFgrW/hYLG3vB2sLCRNQoYnw0dmJj
+        vAAADrwBlbxySQAAAcFJREFUSEvtlTtLA1EQhf0rghEsAiIIdoIWFgrW/hYLG3vB2sLCRNQoYnw0dmJj
         YVKmSNYkS0QiBLN5EJLGMTk73MfsXaNYiH5Mc885s2eXJJuJ4If5L4jl7xQcvBaWy9lZLzPjHW34t8Va
         FUYcMQUrlaupYsox+UoJ0QhcBca1oiZRTDebTexYyAVbzw/GVTb3duEFQa/XmzzdNgLwLISCxfKFuum4
         u8FgoCZbrRYMBaFA2UlDcqLkhecwCziasNJsdTodSCFsJb0TSCFawXrpkqOQFNiyCwh2cQ7RCjiUy+Ug
@@ -132,4 +132,7 @@
         QmCC
 </value>
   </data>
+  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

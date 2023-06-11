@@ -19,26 +19,34 @@ namespace InventorySystemGrocery
         DatabaseConnection dbcon = new DatabaseConnection();
         SqlDataReader reader;
 
-        //ProductStock prod_list;
+   
 
         public Register()
         {
             InitializeComponent();
             connect = new SqlConnection(dbcon.connectdb());
-            //prod_list = stock_list;
+            loadCategory();
+            
         }
 
-        private void btnStock_Click(object sender, EventArgs e)
+        public void loadCategory()
         {
+            cbCategory.Items.Clear();
+            command = new SqlCommand("SELECT CategoryName FROM Category", connect);
+            connect.Open();
+            reader = command.ExecuteReader();
 
+            while (reader.Read())
+            {
+                cbCategory.Items.Add(reader["CategoryName"].ToString());
+            }
+            reader.Close();
+            connect.Close();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtProductCode.Clear();
-            txtProductDesc.Clear();
-            txtQuantity.Clear();
-            txtPrice.Clear();
+            Clear();
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
@@ -51,31 +59,32 @@ namespace InventorySystemGrocery
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+           
             try
             {
-                /*if ((txtProductDesc.Text == string.Empty) || (cbCategory.Text == string.Empty) || (txtQuantity.Text == string.Empty) || (txtPrice.Text == string.Empty))
+                if ((txtProductCode.Text == string.Empty) || (txtProductName.Text == string.Empty) || (txtProductDesc.Text == string.Empty) || (cbCategory.Text == string.Empty) || (txtQuantity.Text == string.Empty) || (txtPrice.Text == string.Empty))
                 {
                     MessageBox.Show("Warning: Required empty field!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
-                }*/
+                }
                 if (MessageBox.Show("Are you sure you want to add this product?", "Adding Product", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                    
-
                     connect.Open();
-                    command = new SqlCommand("INSERT INTO Product(ProductCode, ProductDesc, Category, Quantity, Price, Date, ExpDate) VALUES (@productCode, @productDesc, @categoryName, @price, @quantity, @date, @expDate)", connect);
+                    command = new SqlCommand("INSERT INTO Product(ProductCode, ProductName, ProductDesc, CategoryName, Quantity, Price, Date, ExpDate) VALUES (@productCode, @productName,@productDesc, @categoryName, @price, @quantity, @date, @expDate)", connect);
                     command.Parameters.AddWithValue("@productCode", txtProductCode.Text);
+                    command.Parameters.AddWithValue("@productName", txtProductName.Text);
                     command.Parameters.AddWithValue("@productDesc", txtProductDesc.Text);
                     command.Parameters.AddWithValue("@categoryName", cbCategory.SelectedItem);
-                    command.Parameters.AddWithValue("@price", Convert.ToInt32(txtPrice.Text));
-                    command.Parameters.AddWithValue("@quantity", Convert.ToInt32(txtQuantity));
-                    command.Parameters.AddWithValue("@date", dtpRegDate.Text);
-                    command.Parameters.AddWithValue("@expDate", dtpExpiration.Text);
+                    command.Parameters.AddWithValue("@quantity", Convert.ToInt32(txtPrice.Text));
+                    command.Parameters.AddWithValue("@Price", Convert.ToInt32(txtQuantity.Text));
+                    command.Parameters.AddWithValue("@date", dtpRegDate.Value.Date);
+                    command.Parameters.AddWithValue("@expDate", dtpExpiration.Value.Date);
 
                     command.ExecuteNonQuery();
                     connect.Close();
                     
-                    MessageBox.Show("Item Added");
+                    MessageBox.Show("Product has been successfully added!");
                     Clear();
                 }
 
@@ -87,21 +96,26 @@ namespace InventorySystemGrocery
                 MessageBox.Show(ex.Message);
             }
         }
-
-        public void Clear()
-        {
-            txtProductCode.Clear();
-            txtProductDesc.Clear();
-            txtQuantity.Clear();
-            txtPrice.Clear();
-        }
-
         private void btnAddCategory_Click_1(object sender, EventArgs e)
         {
             AddCategory add_cat = new AddCategory();
             add_cat.Show();
         }
 
+        // Created Methods
+        public void Clear()
+        {
+            txtProductName.Clear();
+            txtProductCode.Clear();
+            txtProductDesc.Clear();
+            txtQuantity.Clear();
+            txtPrice.Clear();
+            cbCategory.Text = null;
+        }
 
+     
+
+
+       
     }
 }

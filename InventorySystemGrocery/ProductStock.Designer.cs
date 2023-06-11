@@ -29,21 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductStock));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.purchaseSearch = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.DGVPurchaseHist = new System.Windows.Forms.DataGridView();
+            this.DGVPurchaselist = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +50,7 @@
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVPurchaseHist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVPurchaselist)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -71,15 +68,15 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "Inventory";
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(62, 14);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(488, 35);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.Text = "Search";
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(62, 14);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(488, 35);
+            this.txtSearch.TabIndex = 12;
+            this.txtSearch.Text = "Search";
             // 
             // purchaseSearch
             // 
@@ -94,84 +91,35 @@
             this.purchaseSearch.TabIndex = 12;
             this.purchaseSearch.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button1.Location = new System.Drawing.Point(1808, 148);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 42);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(1652, 152);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(145, 33);
-            this.dateTimePicker2.TabIndex = 21;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1496, 155);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(145, 33);
-            this.dateTimePicker1.TabIndex = 19;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1370, 157);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 29);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "By Date:";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.DGVPurchaseHist);
+            this.panel1.Controls.Add(this.DGVPurchaselist);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 200);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1946, 722);
             this.panel1.TabIndex = 20;
             // 
-            // DGVPurchaseHist
+            // DGVPurchaselist
             // 
-            this.DGVPurchaseHist.AllowUserToAddRows = false;
-            this.DGVPurchaseHist.BackgroundColor = System.Drawing.Color.White;
-            this.DGVPurchaseHist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Aquamarine;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVPurchaseHist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DGVPurchaseHist.ColumnHeadersHeight = 34;
-            this.DGVPurchaseHist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DGVPurchaseHist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGVPurchaselist.AllowUserToAddRows = false;
+            this.DGVPurchaselist.BackgroundColor = System.Drawing.Color.White;
+            this.DGVPurchaselist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Aquamarine;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVPurchaselist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.DGVPurchaselist.ColumnHeadersHeight = 34;
+            this.DGVPurchaselist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DGVPurchaselist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column3,
+            this.Column9,
             this.Column2,
             this.Column4,
             this.Column6,
@@ -180,35 +128,31 @@
             this.Column8,
             this.Edit,
             this.Delete});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Cyan;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVPurchaseHist.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DGVPurchaseHist.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DGVPurchaseHist.EnableHeadersVisualStyles = false;
-            this.DGVPurchaseHist.Location = new System.Drawing.Point(0, 0);
-            this.DGVPurchaseHist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.DGVPurchaseHist.Name = "DGVPurchaseHist";
-            this.DGVPurchaseHist.RowHeadersVisible = false;
-            this.DGVPurchaseHist.RowHeadersWidth = 62;
-            this.DGVPurchaseHist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVPurchaseHist.Size = new System.Drawing.Size(1946, 722);
-            this.DGVPurchaseHist.TabIndex = 17;
-            this.DGVPurchaseHist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVPurchaseHist_CellContentClick);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Cyan;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVPurchaselist.DefaultCellStyle = dataGridViewCellStyle6;
+            this.DGVPurchaselist.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DGVPurchaselist.EnableHeadersVisualStyles = false;
+            this.DGVPurchaselist.Location = new System.Drawing.Point(0, 0);
+            this.DGVPurchaselist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DGVPurchaselist.Name = "DGVPurchaselist";
+            this.DGVPurchaselist.RowHeadersVisible = false;
+            this.DGVPurchaselist.RowHeadersWidth = 62;
+            this.DGVPurchaselist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGVPurchaselist.Size = new System.Drawing.Size(1946, 722);
+            this.DGVPurchaselist.TabIndex = 17;
+            this.DGVPurchaselist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVPurchaselist_CellContentClick);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkCyan;
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.dateTimePicker2);
-            this.panel2.Controls.Add(this.dateTimePicker1);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -219,7 +163,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtSearch);
             this.panel3.Controls.Add(this.purchaseSearch);
             this.panel3.Location = new System.Drawing.Point(14, 128);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -242,6 +186,13 @@
             this.Column3.MinimumWidth = 8;
             this.Column3.Name = "Column3";
             this.Column3.Width = 200;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Product Name";
+            this.Column9.MinimumWidth = 8;
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 150;
             // 
             // Column2
             // 
@@ -284,10 +235,11 @@
             // 
             // Column8
             // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column8.HeaderText = "Expiration Date";
             this.Column8.MinimumWidth = 8;
             this.Column8.Name = "Column8";
-            this.Column8.Width = 150;
+            this.Column8.Width = 166;
             // 
             // Edit
             // 
@@ -314,7 +266,7 @@
             this.Name = "ProductStock";
             this.Text = "ProductStock";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DGVPurchaseHist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVPurchaselist)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -326,18 +278,15 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button purchaseSearch;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView DGVPurchaseHist;
+        private System.Windows.Forms.DataGridView DGVPurchaselist;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;

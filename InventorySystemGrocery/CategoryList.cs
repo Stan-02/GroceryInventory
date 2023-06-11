@@ -20,13 +20,15 @@ namespace InventorySystemGrocery
         public CategoryList()
         {
             InitializeComponent();
+            connect = new SqlConnection(dbcon.connectdb());
+            loadCategory();
         }
 
         public void loadCategory()
         {
             int i = 0;
             DGVCategory.Rows.Clear();
-            command = new SqlCommand("Select * from Category", connect);
+            command = new SqlCommand("SELECT * FROM Category", connect);
             connect.Open();
             reader = command.ExecuteReader();
 
@@ -50,9 +52,26 @@ namespace InventorySystemGrocery
             
             if(colname == "Edit")
             {
-                AddCategory addCat = new AddCategory();
-                
+                AddCategory addCat_form = new AddCategory();
+                addCat_form.lblCatID.Text = DGVCategory.Rows[e.RowIndex].Cells[1].Value.ToString();
+                addCat_form.txtCategory.Text = DGVCategory.Rows[e.RowIndex].Cells[2].Value.ToString();
+
+                addCat_form.btnAddCat.Enabled = false;
+                addCat_form.btnUpdate.Enabled = true;
+                addCat_form.ShowDialog();
+
             }
+            else if (colname == "Delete")
+            {
+                if(MessageBox.Show("Are you want to delete this category?", "Delete Category", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes){
+                    connect.Open();
+                    command = new SqlCommand("DELETE FROM Category WHERE CategoryID LIKE '" + DGVCategory.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", connect);
+                    command.ExecuteNonQuery();
+                    connect.Open();
+                    MessageBox.Show("Category has been successfully delete!");
+                }
+            }
+            loadCategory();
         }
     }
 }
