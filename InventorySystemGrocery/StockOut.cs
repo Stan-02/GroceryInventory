@@ -18,7 +18,7 @@ namespace InventorySystemGrocery
         SqlCommand command = new SqlCommand();
         DatabaseConnection dbcon = new DatabaseConnection();
         SqlDataReader reader;
-
+        int qty = 0;
         public StockOut()
         {
             InitializeComponent();
@@ -43,7 +43,7 @@ namespace InventorySystemGrocery
             connect.Close();
         }
         
-        int qty = 0;
+        
 
         private void DGVinventory_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -62,8 +62,12 @@ namespace InventorySystemGrocery
                 numericQty.Value = numericQty.Value - 1;
                 return;
             }
-            int total = Convert.ToInt32(txtPrice.Text) * Convert.ToInt32(numericQty.Value);
-            txtTotal.Text = total.ToString();
+            if(Convert.ToInt32(numericQty.Value) > 0)
+            {
+                int total = Convert.ToInt32(txtPrice.Text) * Convert.ToInt32(numericQty.Value);
+                txtTotal.Text = total.ToString();
+            }
+            
         }
 
         private void btnHistory_Click(object sender, EventArgs e)
@@ -83,7 +87,7 @@ namespace InventorySystemGrocery
             txtProdDesc.Clear();
             txtProdCode.Clear();
             txtTotal.Clear();
-            numericQty.Value.ToString("");
+            numericQty.Value = 0 ;
             
         }
 
@@ -113,7 +117,30 @@ namespace InventorySystemGrocery
                 MessageBox.Show("Product has been successfully added!");
                 Clear();
 
+                command = new SqlCommand("UPDATE Product SET Quantity = (Quantity - @quantity) WHERE ProductCode LIKE '" + txtProdCode.Text + "'", connect);
+                command.Parameters.AddWithValue("@quantity", Convert.ToInt32(numericQty.Value));
+                connect.Open();
+                command.ExecuteNonQuery();
+                connect.Close();
+
+
+                viewItemList();
             }
+        }
+
+        public void getQty()
+        {
+            command = new SqlCommand("Select Quantity from Product WHERE ProductCode =(ProductCode, ProductName, ProductDesc, CategoryName, Quantity, Price, Date, ExpDate) LIKE '%" + txtSearchProd.Text + "%'", connect);
+            connect.Open();
+            reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                i++;
+                DGVinventory.Rows.Add(i, reader["ProductCode"].ToString(), reader["ProductName"].ToString(), reader["ProductDesc"].ToString(), reader["CategoryName"].ToString(), reader["Quantity"].ToString(), reader["Price"].ToString(), reader["Date"].ToString(), reader["ExpDate"].ToString());
+            }
+            reader.Close();
+            connect.Close();
         }
     }
 }

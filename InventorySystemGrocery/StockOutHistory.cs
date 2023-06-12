@@ -46,14 +46,14 @@ namespace InventorySystemGrocery
         {
             int i = 0;
             DGVHisInvent.Rows.Clear();
-            command = new SqlCommand("SELECT ProductCode, ProductDesc, Quantity, Price, Date, Total FROM StockOut ", connect);
+            command = new SqlCommand("SELECT * FROM StockOut ", connect);
             connect.Open();
             reader = command.ExecuteReader();
 
             while (reader.Read())
             {
                 i++;
-                DGVHisInvent.Rows.Add(i, reader["ProductCode"].ToString(), reader["ProductDesc"].ToString(), reader["Quantity"].ToString(), reader["Price"].ToString(), reader["Date"].ToString(), reader["Total"].ToString());
+                DGVHisInvent.Rows.Add(i, reader["StockoutID"].ToString(), reader["ProductCode"].ToString(), reader["ProductDesc"].ToString(), reader["Quantity"].ToString(), reader["Price"].ToString(), reader["Date"].ToString(), reader["Total"].ToString());
             }
             reader.Close();
             connect.Close();
