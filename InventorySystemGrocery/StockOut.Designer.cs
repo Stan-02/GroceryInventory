@@ -42,11 +42,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpOrderDate = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.txtProdDesc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtProdName = new System.Windows.Forms.TextBox();
+            this.txtProdCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSearchProd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -99,11 +99,11 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.txtPrice);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.dtpOrderDate);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.txtProdDesc);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.txtProdName);
+            this.panel2.Controls.Add(this.txtProdCode);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.txtSearchProd);
             this.panel2.Controls.Add(this.label2);
@@ -159,6 +159,7 @@
             this.btnAdd.TabIndex = 29;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtTotal
             // 
@@ -213,13 +214,13 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "Price:";
             // 
-            // dateTimePicker1
+            // dtpOrderDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(624, 709);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(302, 26);
-            this.dateTimePicker1.TabIndex = 22;
+            this.dtpOrderDate.Location = new System.Drawing.Point(624, 709);
+            this.dtpOrderDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpOrderDate.Name = "dtpOrderDate";
+            this.dtpOrderDate.Size = new System.Drawing.Size(302, 26);
+            this.dtpOrderDate.TabIndex = 22;
             // 
             // label5
             // 
@@ -253,15 +254,15 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "Product Description:";
             // 
-            // txtProdName
+            // txtProdCode
             // 
-            this.txtProdName.Enabled = false;
-            this.txtProdName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProdName.Location = new System.Drawing.Point(142, 709);
-            this.txtProdName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtProdName.Name = "txtProdName";
-            this.txtProdName.Size = new System.Drawing.Size(324, 33);
-            this.txtProdName.TabIndex = 18;
+            this.txtProdCode.Enabled = false;
+            this.txtProdCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProdCode.Location = new System.Drawing.Point(142, 709);
+            this.txtProdCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtProdCode.Name = "txtProdCode";
+            this.txtProdCode.Size = new System.Drawing.Size(324, 33);
+            this.txtProdCode.TabIndex = 18;
             // 
             // label3
             // 
@@ -272,7 +273,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(194, 27);
             this.label3.TabIndex = 17;
-            this.label3.Text = "Product Name:";
+            this.label3.Text = "Product Code:";
             // 
             // txtSearchProd
             // 
@@ -430,11 +431,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpOrderDate;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtProdDesc;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtProdName;
+        private System.Windows.Forms.TextBox txtProdCode;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown numericQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

@@ -43,12 +43,12 @@ namespace InventorySystemGrocery
             connect.Close();
         }
         
-        int qty = 1;
+        int qty = 0;
 
         private void DGVinventory_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            txtProdName.Text = DGVinventory.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtProdCode.Text = DGVinventory.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtProdDesc.Text = DGVinventory.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtPrice.Text = DGVinventory.Rows[e.RowIndex].Cells[6].Value.ToString();
             qty = Convert.ToInt32(DGVinventory.Rows[e.RowIndex].Cells[5].Value.ToString());
@@ -81,7 +81,7 @@ namespace InventorySystemGrocery
         {
             txtPrice.Clear();
             txtProdDesc.Clear();
-            txtProdName.Clear();
+            txtProdCode.Clear();
             txtTotal.Clear();
             numericQty.Value.ToString("");
             
@@ -90,6 +90,30 @@ namespace InventorySystemGrocery
         private void txtSearchProd_TextChanged(object sender, EventArgs e)
         {
             viewItemList();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("Are you sure you want to add this product?", "Adding Product", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                connect.Open();
+                command = new SqlCommand("INSERT INTO StockOut (ProductCode, ProductDesc, Quantity, Price, Date, Total) VALUES (@productCode, @productDesc, @quantity, @price, @date, @total)", connect);
+                command.Parameters.AddWithValue("@productCode", txtProdCode.Text);
+                command.Parameters.AddWithValue("@productDesc", txtProdDesc.Text);
+                command.Parameters.AddWithValue("@quantity", Convert.ToInt32(numericQty.Text));
+                command.Parameters.AddWithValue("@Price", Convert.ToInt32(txtPrice.Text));
+                command.Parameters.AddWithValue("@date", dtpOrderDate.Value.Date);
+                command.Parameters.AddWithValue("@total", txtTotal.Text);
+
+                command.ExecuteNonQuery();
+                connect.Close();
+
+                MessageBox.Show("Product has been successfully added!");
+                Clear();
+
+            }
         }
     }
 }
