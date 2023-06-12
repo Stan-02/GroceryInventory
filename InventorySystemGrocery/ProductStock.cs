@@ -71,17 +71,18 @@ namespace InventorySystemGrocery
             if (colname == "Edit")
             {
                 Register addprod = new Register();
-                //addprod.lblProductID.Text = DGVPurchaselist.Rows[e.RowIndex].Cells[1].Value.ToString();
                 addprod.txtProductCode.Text = DGVPurchaselist.Rows[e.RowIndex].Cells[1].Value.ToString();
                 addprod.txtProductName.Text = DGVPurchaselist.Rows[e.RowIndex].Cells[2].Value.ToString();
-                addprod.cbCategory.Text = DGVPurchaselist.Rows[e.RowIndex].Cells[3].Value.ToString();
-                addprod.txtQuantity.Text = DGVPurchaselist.Rows[e.RowIndex].Cells[4].Value.ToString();
-                addprod.txtPrice.Text = DGVPurchaselist.Rows[e.RowIndex].Cells[5].Value.ToString();
-                addprod.dtpRegDate.Value = Convert.ToDateTime(DGVPurchaselist.Rows[e.RowIndex].Cells[6].Value.ToString());
-                addprod.dtpExpiration.Value = Convert.ToDateTime(DGVPurchaselist.Rows[e.RowIndex].Cells[7].Value.ToString());
+                addprod.txtProductDesc.Text = DGVPurchaselist.Rows[e.RowIndex].Cells[3].Value.ToString();
+                addprod.cbCategory.Text = DGVPurchaselist.Rows[e.RowIndex].Cells[4].Value.ToString();
+                addprod.txtQuantity.Text = DGVPurchaselist.Rows[e.RowIndex].Cells[5].Value.ToString();
+                addprod.txtPrice.Text = DGVPurchaselist.Rows[e.RowIndex].Cells[6].Value.ToString();
+                addprod.dtpRegDate.Value = Convert.ToDateTime(DGVPurchaselist.Rows[e.RowIndex].Cells[7].Value.ToString());
+                addprod.dtpExpiration.Value = Convert.ToDateTime(DGVPurchaselist.Rows[e.RowIndex].Cells[8].Value.ToString());
 
                 addprod.btnAdd.Enabled = false;
-                //addprod.btnUpdate.Enabled = true;
+                addprod.btnUpdate.Enabled = true;
+                addprod.btnGenerate.Enabled = false;
                 addprod.ShowDialog();
 
             }

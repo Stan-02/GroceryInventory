@@ -42,11 +42,12 @@ namespace InventorySystemGrocery
             reader.Close();
             connect.Close();
         }
-
+        
         int qty = 0;
 
         private void DGVinventory_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
             txtProdName.Text = DGVinventory.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtProdDesc.Text = DGVinventory.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtPrice.Text = DGVinventory.Rows[e.RowIndex].Cells[6].Value.ToString();
@@ -82,6 +83,7 @@ namespace InventorySystemGrocery
             txtProdDesc.Clear();
             txtProdName.Clear();
             txtTotal.Clear();
+            numericQty.Value.ToString("");
             
         }
 

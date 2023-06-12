@@ -24,10 +24,13 @@ namespace InventorySystemGrocery
         public Register()
         {
             InitializeComponent();
+            btnUpdate.Enabled = false;
             connect = new SqlConnection(dbcon.connectdb());
             loadCategory();
             
         }
+
+        
 
         public void loadCategory()
         {
@@ -86,6 +89,7 @@ namespace InventorySystemGrocery
                     
                     MessageBox.Show("Product has been successfully added!");
                     Clear();
+                    
                 }
 
             
@@ -95,6 +99,8 @@ namespace InventorySystemGrocery
             {
                 MessageBox.Show(ex.Message);
             }
+            
+
         }
         private void btnAddCategory_Click_1(object sender, EventArgs e)
         {
@@ -113,9 +119,36 @@ namespace InventorySystemGrocery
             cbCategory.Text = null;
         }
 
-     
+        
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                if (MessageBox.Show("Are you sure to Update this Product?", "Update Product", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    connect.Open();
+                    command = new SqlCommand("UPDATE Product SET ProductName = @productName, ProductDesc = @productDesc, CategoryName = @categoryName, Quantity = @quantity, Price = @price, Date = @date, ExpDate = @expDate WHERE ProductCode LIKE '" + txtProductCode.Text + "'", connect);
+                    command.Parameters.AddWithValue("@productName", txtProductName.Text);
+                    command.Parameters.AddWithValue("@productDesc", txtProductDesc.Text);
+                    command.Parameters.AddWithValue("@categoryName", cbCategory.SelectedItem);
+                    command.Parameters.AddWithValue("@quantity", txtQuantity.Text);
+                    command.Parameters.AddWithValue("@price", txtPrice.Text);
+                    command.Parameters.AddWithValue("@date", dtpRegDate.Value.Date);
+                    command.Parameters.AddWithValue("@expDate", dtpExpiration.Value.Date);
 
-       
+                    command.ExecuteNonQuery();
+                    connect.Close();
+                    MessageBox.Show("Product has been successfully updated!");
+                    this.Dispose();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
     }
 }

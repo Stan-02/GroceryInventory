@@ -191,7 +191,7 @@
             this.Column1.HeaderText = "No.";
             this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
+            this.Column1.Width = 50;
             // 
             // Column3
             // 
@@ -199,7 +199,7 @@
             this.Column3.HeaderText = "Product Code";
             this.Column3.MinimumWidth = 8;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 200;
+            this.Column3.Width = 150;
             // 
             // Column9
             // 
@@ -214,7 +214,7 @@
             this.Column2.HeaderText = "Product Description";
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 250;
+            this.Column2.Width = 155;
             // 
             // Column4
             // 
@@ -238,22 +238,20 @@
             this.Column5.HeaderText = "Price";
             this.Column5.MinimumWidth = 8;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 150;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "Date";
             this.Column7.MinimumWidth = 8;
             this.Column7.Name = "Column7";
-            this.Column7.Width = 200;
+            this.Column7.Width = 80;
             // 
             // Column8
             // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column8.HeaderText = "Expiration Date";
             this.Column8.MinimumWidth = 8;
             this.Column8.Name = "Column8";
-            this.Column8.Width = 166;
+            this.Column8.Width = 80;
             // 
             // Edit
             // 

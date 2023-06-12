@@ -34,13 +34,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBackup = new System.Windows.Forms.TextBox();
             this.btnBrowse = new System.Windows.Forms.Button();
-            this.btnRestore = new System.Windows.Forms.Button();
+            this.btnBackup = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.txtRestore = new System.Windows.Forms.TextBox();
+            this.btnResBrowse = new System.Windows.Forms.Button();
+            this.btnRestore = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -119,13 +119,13 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Backup Files";
             // 
-            // textBox1
+            // txtBackup
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 31);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(314, 26);
-            this.textBox1.TabIndex = 10;
+            this.txtBackup.Location = new System.Drawing.Point(18, 31);
+            this.txtBackup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBackup.Name = "txtBackup";
+            this.txtBackup.Size = new System.Drawing.Size(314, 26);
+            this.txtBackup.TabIndex = 10;
             // 
             // btnBrowse
             // 
@@ -137,22 +137,22 @@
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.UseVisualStyleBackColor = true;
             // 
-            // btnRestore
+            // btnBackup
             // 
-            this.btnRestore.Location = new System.Drawing.Point(344, 75);
-            this.btnRestore.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnRestore.Name = "btnRestore";
-            this.btnRestore.Size = new System.Drawing.Size(112, 35);
-            this.btnRestore.TabIndex = 12;
-            this.btnRestore.Text = "Backup";
-            this.btnRestore.UseVisualStyleBackColor = true;
+            this.btnBackup.Location = new System.Drawing.Point(344, 75);
+            this.btnBackup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBackup.Name = "btnBackup";
+            this.btnBackup.Size = new System.Drawing.Size(112, 35);
+            this.btnBackup.TabIndex = 12;
+            this.btnBackup.Text = "Backup";
+            this.btnBackup.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.groupBox1.Controls.Add(this.btnRestore);
+            this.groupBox1.Controls.Add(this.btnBackup);
             this.groupBox1.Controls.Add(this.btnBrowse);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtBackup);
             this.groupBox1.Location = new System.Drawing.Point(98, 431);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
@@ -162,41 +162,41 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Backup Database";
             // 
-            // textBox2
+            // txtRestore
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 29);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(314, 26);
-            this.textBox2.TabIndex = 13;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtRestore.Location = new System.Drawing.Point(16, 29);
+            this.txtRestore.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtRestore.Name = "txtRestore";
+            this.txtRestore.Size = new System.Drawing.Size(314, 26);
+            this.txtRestore.TabIndex = 13;
+            this.txtRestore.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // button2
+            // btnResBrowse
             // 
-            this.button2.Location = new System.Drawing.Point(342, 25);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 35);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Browse";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnResBrowse.Location = new System.Drawing.Point(342, 25);
+            this.btnResBrowse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnResBrowse.Name = "btnResBrowse";
+            this.btnResBrowse.Size = new System.Drawing.Size(112, 35);
+            this.btnResBrowse.TabIndex = 14;
+            this.btnResBrowse.Text = "Browse";
+            this.btnResBrowse.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnRestore
             // 
-            this.button3.Location = new System.Drawing.Point(342, 69);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 35);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Restore";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnRestore.Location = new System.Drawing.Point(342, 69);
+            this.btnRestore.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRestore.Name = "btnRestore";
+            this.btnRestore.Size = new System.Drawing.Size(112, 35);
+            this.btnRestore.TabIndex = 15;
+            this.btnRestore.Text = "Restore";
+            this.btnRestore.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.btnRestore);
+            this.groupBox2.Controls.Add(this.btnResBrowse);
+            this.groupBox2.Controls.Add(this.txtRestore);
             this.groupBox2.Location = new System.Drawing.Point(642, 431);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
@@ -240,13 +240,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBackup;
         private System.Windows.Forms.Button btnBrowse;
-        private System.Windows.Forms.Button btnRestore;
+        private System.Windows.Forms.Button btnBackup;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtRestore;
+        private System.Windows.Forms.Button btnResBrowse;
+        private System.Windows.Forms.Button btnRestore;
         private System.Windows.Forms.GroupBox groupBox2;
     }
 }
