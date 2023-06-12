@@ -24,10 +24,9 @@ namespace InventorySystemGrocery
         public Register()
         {
             InitializeComponent();
-            btnUpdate.Enabled = false;
             connect = new SqlConnection(dbcon.connectdb());
             loadCategory();
-            
+            btnUpdate.Enabled = false;
         }
 
         
@@ -102,11 +101,7 @@ namespace InventorySystemGrocery
             
 
         }
-        private void btnAddCategory_Click_1(object sender, EventArgs e)
-        {
-            AddCategory add_cat = new AddCategory();
-            add_cat.Show();
-        }
+   
 
         // Created Methods
         public void Clear()
@@ -149,6 +144,30 @@ namespace InventorySystemGrocery
                 MessageBox.Show(ex.Message);
             }
             
+        }
+
+        private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnShowCat_Click(object sender, EventArgs e)
+        {
+            CategoryList catlist = new CategoryList();
+            catlist.Show();
         }
     }
 }

@@ -88,13 +88,24 @@ namespace InventorySystemGrocery
             }
             else if (colname == "Delete")
             {
-                if (MessageBox.Show("do you want to delete this Product?", "Delete Product", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Do you want to delete this product?", "Delete the record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    connect.Open();
-                    command = new SqlCommand("DELETE FROM Product WHERE ProductCode LIKE '" + DGVPurchaselist.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", connect);
-                    command.ExecuteNonQuery();
-                    connect.Close();
-                    MessageBox.Show("Product Move to Achive!");
+                    if (e.ColumnIndex == DGVPurchaselist.Columns["Delete"].Index && e.RowIndex >= 0)
+                    {
+                        int id = Convert.ToInt32(DGVPurchaselist.Rows[e.RowIndex].Cells["ProductCode"].Value);
+                        using (SqlConnection connection = new SqlConnection(dbcon.connectdb()))
+                        {
+                            connection.Open();
+                            using (SqlCommand command = new SqlCommand("UPDATE Product SET ArchiveID = 1 WHERE ProductCode = @productCode", connection))
+                            {
+                                command.Parameters.AddWithValue("@productCode", id);
+                                command.ExecuteNonQuery();
+                            }
+                            connection.Close();
+                        }
+                        DGVPurchaselist.Rows.RemoveAt(e.RowIndex);
+
+                    }
                 }
             }
             loadProduct();
@@ -103,6 +114,12 @@ namespace InventorySystemGrocery
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             searchItems();
+        }
+
+        private void btnDelCat_Click(object sender, EventArgs e)
+        {
+            RecycleBinProduct arhvProd = new RecycleBinProduct();
+            arhvProd.Show();
         }
     }
 }

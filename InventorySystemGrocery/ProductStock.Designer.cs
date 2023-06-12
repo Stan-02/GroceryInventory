@@ -48,8 +48,8 @@
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btnDelCat = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVPurchaselist)).BeginInit();
             this.panel2.SuspendLayout();
@@ -62,18 +62,20 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(393, 18);
+            this.label2.Location = new System.Drawing.Point(590, 28);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 42);
+            this.label2.Size = new System.Drawing.Size(267, 64);
             this.label2.TabIndex = 23;
             this.label2.Text = "Inventory";
             // 
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(41, 9);
+            this.txtSearch.Location = new System.Drawing.Point(62, 14);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(327, 26);
+            this.txtSearch.Size = new System.Drawing.Size(488, 35);
             this.txtSearch.TabIndex = 12;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -83,9 +85,10 @@
             this.purchaseSearch.FlatAppearance.BorderSize = 0;
             this.purchaseSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.purchaseSearch.Image = ((System.Drawing.Image)(resources.GetObject("purchaseSearch.Image")));
-            this.purchaseSearch.Location = new System.Drawing.Point(4, 3);
+            this.purchaseSearch.Location = new System.Drawing.Point(6, 5);
+            this.purchaseSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.purchaseSearch.Name = "purchaseSearch";
-            this.purchaseSearch.Size = new System.Drawing.Size(31, 37);
+            this.purchaseSearch.Size = new System.Drawing.Size(46, 57);
             this.purchaseSearch.TabIndex = 12;
             this.purchaseSearch.UseVisualStyleBackColor = true;
             // 
@@ -94,10 +97,9 @@
             this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Controls.Add(this.DGVPurchaselist);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 130);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 200);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1080, 468);
+            this.panel1.Size = new System.Drawing.Size(1620, 720);
             this.panel1.TabIndex = 20;
             // 
             // DGVPurchaselist
@@ -139,11 +141,12 @@
             this.DGVPurchaselist.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVPurchaselist.EnableHeadersVisualStyles = false;
             this.DGVPurchaselist.Location = new System.Drawing.Point(0, 0);
+            this.DGVPurchaselist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DGVPurchaselist.Name = "DGVPurchaselist";
             this.DGVPurchaselist.RowHeadersVisible = false;
             this.DGVPurchaselist.RowHeadersWidth = 62;
             this.DGVPurchaselist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVPurchaselist.Size = new System.Drawing.Size(1080, 468);
+            this.DGVPurchaselist.Size = new System.Drawing.Size(1620, 720);
             this.DGVPurchaselist.TabIndex = 17;
             this.DGVPurchaselist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVPurchaselist_CellContentClick);
             // 
@@ -200,6 +203,7 @@
             this.Column5.HeaderText = "Price";
             this.Column5.MinimumWidth = 8;
             this.Column5.Name = "Column5";
+            this.Column5.Width = 150;
             // 
             // Column7
             // 
@@ -241,39 +245,42 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1080, 130);
+            this.panel2.Size = new System.Drawing.Size(1620, 200);
             this.panel2.TabIndex = 19;
+            // 
+            // btnDelCat
+            // 
+            this.btnDelCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelCat.Image = ((System.Drawing.Image)(resources.GetObject("btnDelCat.Image")));
+            this.btnDelCat.Location = new System.Drawing.Point(1564, 137);
+            this.btnDelCat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDelCat.Name = "btnDelCat";
+            this.btnDelCat.Size = new System.Drawing.Size(54, 60);
+            this.btnDelCat.TabIndex = 24;
+            this.btnDelCat.UseVisualStyleBackColor = true;
+            this.btnDelCat.Click += new System.EventHandler(this.btnDelCat_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.txtSearch);
             this.panel3.Controls.Add(this.purchaseSearch);
-            this.panel3.Location = new System.Drawing.Point(9, 83);
+            this.panel3.Location = new System.Drawing.Point(14, 128);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(377, 41);
+            this.panel3.Size = new System.Drawing.Size(566, 63);
             this.panel3.TabIndex = 18;
-            // 
-            // btnDelCat
-            // 
-            this.btnDelCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelCat.Image = ((System.Drawing.Image)(resources.GetObject("btnDelCat.Image")));
-            this.btnDelCat.Location = new System.Drawing.Point(1043, 89);
-            this.btnDelCat.Name = "btnDelCat";
-            this.btnDelCat.Size = new System.Drawing.Size(36, 39);
-            this.btnDelCat.TabIndex = 24;
-            this.btnDelCat.UseVisualStyleBackColor = true;
             // 
             // ProductStock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 598);
+            this.ClientSize = new System.Drawing.Size(1620, 920);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ProductStock";
             this.Text = "ProductStock";
             this.panel1.ResumeLayout(false);

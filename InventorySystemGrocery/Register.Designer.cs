@@ -47,7 +47,7 @@
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dtpExpiration = new System.Windows.Forms.DateTimePicker();
-            this.btnAddCategory = new System.Windows.Forms.Button();
+            this.btnShowCat = new System.Windows.Forms.Button();
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -121,6 +121,7 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(354, 35);
             this.txtPrice.TabIndex = 30;
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // txtQuantity
             // 
@@ -131,6 +132,7 @@
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(354, 35);
             this.txtQuantity.TabIndex = 29;
+            this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
             // 
             // txtProductDesc
             // 
@@ -276,21 +278,21 @@
             this.dtpExpiration.Size = new System.Drawing.Size(298, 26);
             this.dtpExpiration.TabIndex = 38;
             // 
-            // btnAddCategory
+            // btnShowCat
             // 
-            this.btnAddCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddCategory.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddCategory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddCategory.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAddCategory.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCategory.Image")));
-            this.btnAddCategory.Location = new System.Drawing.Point(661, 394);
-            this.btnAddCategory.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.Size = new System.Drawing.Size(73, 52);
-            this.btnAddCategory.TabIndex = 39;
-            this.btnAddCategory.UseVisualStyleBackColor = false;
-            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click_1);
+            this.btnShowCat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnShowCat.BackColor = System.Drawing.Color.Transparent;
+            this.btnShowCat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShowCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowCat.ForeColor = System.Drawing.Color.Transparent;
+            this.btnShowCat.Image = ((System.Drawing.Image)(resources.GetObject("btnShowCat.Image")));
+            this.btnShowCat.Location = new System.Drawing.Point(661, 394);
+            this.btnShowCat.Margin = new System.Windows.Forms.Padding(0);
+            this.btnShowCat.Name = "btnShowCat";
+            this.btnShowCat.Size = new System.Drawing.Size(73, 52);
+            this.btnShowCat.TabIndex = 39;
+            this.btnShowCat.UseVisualStyleBackColor = false;
+            this.btnShowCat.Click += new System.EventHandler(this.btnShowCat_Click);
             // 
             // txtProductName
             // 
@@ -339,7 +341,7 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.btnAddCategory);
+            this.Controls.Add(this.btnShowCat);
             this.Controls.Add(this.dtpExpiration);
             this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.label7);
@@ -386,7 +388,7 @@
         public System.Windows.Forms.ComboBox cbCategory;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.DateTimePicker dtpExpiration;
-        public System.Windows.Forms.Button btnAddCategory;
+        public System.Windows.Forms.Button btnShowCat;
         public System.Windows.Forms.TextBox txtProductName;
         public System.Windows.Forms.Label label8;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;

@@ -20,13 +20,16 @@ namespace InventorySystemGrocery
         {
             InitializeComponent();
             connect = new SqlConnection(dbcon.connectdb());
+            catlist.loadCategory();
         }
 
-
+        CategoryList catlist = new CategoryList();
 
         private void btnCatExit_Click(object sender, EventArgs e)
         {
                 Dispose();
+            CategoryList catlist = new CategoryList();
+            catlist.Refresh();
         }
 
         private void btnAddCat_Click(object sender, EventArgs e)
@@ -50,6 +53,8 @@ namespace InventorySystemGrocery
                         connect.Close();
                         MessageBox.Show("Category has been successfully added!");
                         Clear();
+                        
+                        
 
                     }
                 }
@@ -58,6 +63,8 @@ namespace InventorySystemGrocery
                     MessageBox.Show(ex.Message);
                 }
             }
+            //CategoryList catlist = new CategoryList();
+            //catlist.loadCategory();
             
         }
 
@@ -75,9 +82,25 @@ namespace InventorySystemGrocery
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            CategoryList catList = new CategoryList();
-            catList.Show();
-            //catList.loadCategory();
+            try
+            {
+               
+                if (MessageBox.Show("Are you sure to Update this Category?", "Update Category", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    
+                    command = new SqlCommand("UPDATE Category SET CategoryName = @categoryName WHERE CategoryID LIKE '" + lblCatID.Text + "'", connect);
+                    command.Parameters.AddWithValue("@categoryName", txtCategory.Text);
+                    connect.Open();
+                    command.ExecuteNonQuery();
+                    connect.Close();
+                    MessageBox.Show("Product has been successfully updated!");
+                    this.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             
         }
     }

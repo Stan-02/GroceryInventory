@@ -32,9 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnCatExit = new System.Windows.Forms.Button();
-            this.DGVPurchaselist = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.DGVProdBin = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,7 +47,7 @@
             this.Restore = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVPurchaselist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVProdBin)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -57,21 +57,10 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1080, 86);
+            this.panel2.Size = new System.Drawing.Size(1620, 132);
             this.panel2.TabIndex = 20;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(400, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(374, 42);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Product Recycle Bin";
             // 
             // btnCatExit
             // 
@@ -79,19 +68,33 @@
             this.btnCatExit.FlatAppearance.BorderSize = 0;
             this.btnCatExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCatExit.Image = ((System.Drawing.Image)(resources.GetObject("btnCatExit.Image")));
-            this.btnCatExit.Location = new System.Drawing.Point(1054, 2);
+            this.btnCatExit.Location = new System.Drawing.Point(1581, 3);
+            this.btnCatExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCatExit.Name = "btnCatExit";
-            this.btnCatExit.Size = new System.Drawing.Size(24, 23);
+            this.btnCatExit.Size = new System.Drawing.Size(36, 35);
             this.btnCatExit.TabIndex = 37;
             this.btnCatExit.UseVisualStyleBackColor = true;
             this.btnCatExit.Click += new System.EventHandler(this.btnCatExit_Click);
             // 
-            // DGVPurchaselist
+            // label2
             // 
-            this.DGVPurchaselist.AllowUserToAddRows = false;
-            this.DGVPurchaselist.BackgroundColor = System.Drawing.Color.White;
-            this.DGVPurchaselist.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DGVPurchaselist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(600, 31);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(549, 64);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Product Recycle Bin";
+            // 
+            // DGVProdBin
+            // 
+            this.DGVProdBin.AllowUserToAddRows = false;
+            this.DGVProdBin.BackgroundColor = System.Drawing.Color.White;
+            this.DGVProdBin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DGVProdBin.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Aquamarine;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,10 +102,10 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVPurchaselist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DGVPurchaselist.ColumnHeadersHeight = 34;
-            this.DGVPurchaselist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DGVPurchaselist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGVProdBin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGVProdBin.ColumnHeadersHeight = 34;
+            this.DGVProdBin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DGVProdBin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column3,
             this.Column9,
@@ -121,16 +124,18 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Cyan;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVPurchaselist.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DGVPurchaselist.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DGVPurchaselist.EnableHeadersVisualStyles = false;
-            this.DGVPurchaselist.Location = new System.Drawing.Point(0, 86);
-            this.DGVPurchaselist.Name = "DGVPurchaselist";
-            this.DGVPurchaselist.RowHeadersVisible = false;
-            this.DGVPurchaselist.RowHeadersWidth = 62;
-            this.DGVPurchaselist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVPurchaselist.Size = new System.Drawing.Size(1080, 394);
-            this.DGVPurchaselist.TabIndex = 21;
+            this.DGVProdBin.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DGVProdBin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DGVProdBin.EnableHeadersVisualStyles = false;
+            this.DGVProdBin.Location = new System.Drawing.Point(0, 132);
+            this.DGVProdBin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DGVProdBin.Name = "DGVProdBin";
+            this.DGVProdBin.RowHeadersVisible = false;
+            this.DGVProdBin.RowHeadersWidth = 62;
+            this.DGVProdBin.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGVProdBin.Size = new System.Drawing.Size(1620, 606);
+            this.DGVProdBin.TabIndex = 21;
+            this.DGVProdBin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVProdBin_CellContentClick);
             // 
             // Column1
             // 
@@ -185,6 +190,7 @@
             this.Column5.HeaderText = "Price";
             this.Column5.MinimumWidth = 8;
             this.Column5.Name = "Column5";
+            this.Column5.Width = 150;
             // 
             // Column7
             // 
@@ -220,16 +226,17 @@
             // 
             // RecycleBinProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 480);
-            this.Controls.Add(this.DGVPurchaselist);
+            this.ClientSize = new System.Drawing.Size(1620, 738);
+            this.Controls.Add(this.DGVProdBin);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "RecycleBinProduct";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVPurchaselist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVProdBin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -239,7 +246,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCatExit;
-        private System.Windows.Forms.DataGridView DGVPurchaselist;
+        private System.Windows.Forms.DataGridView DGVProdBin;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
