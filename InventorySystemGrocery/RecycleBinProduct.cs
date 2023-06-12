@@ -30,11 +30,11 @@ namespace InventorySystemGrocery
             int i = 0;
             DGVProdBin.Rows.Clear();
             connect.Open();
-            command = new SqlCommand("Select * from Product WHERE ArchiveID = 1", connect);
+            command = new SqlCommand("Select * from Product WHERE Archive = 1", connect);
             reader = command.ExecuteReader();
             while (reader.Read())
             {
-                if (reader["ArchiveID"].ToString() == "1")
+                if (reader["Archive"].ToString() == "1")
                 {
                     i += 1;
                     DGVProdBin.Rows.Add(i, reader["ProductCode"].ToString(), reader["ProductName"], reader["ProductDesc"].ToString(), reader["CategoryName"].ToString(), reader["Quantity"].ToString(), reader["Price"].ToString());
@@ -61,14 +61,14 @@ namespace InventorySystemGrocery
                 {
                     if (e.ColumnIndex == DGVProdBin.Columns["Restore"].Index && e.RowIndex >= 0)
                     {
-                        int id = Convert.ToInt32(DGVProdBin.Rows[e.RowIndex].Cells["ID"].Value);
+                        int id = Convert.ToInt32(DGVProdBin.Rows[e.RowIndex].Cells["ProductCode"].Value);
                         using (SqlConnection connection = new SqlConnection(dbcon.connectdb()))
                         {
                             connection.Open();
-                            using (SqlCommand command = new SqlCommand("UPDATE Product SET ArchiveID = @ArchiveID WHERE ProductCode = @productCode", connection))
+                            using (SqlCommand command = new SqlCommand("UPDATE Product SET Archive = @Archive WHERE ProductCode = @productCode", connection))
                             {
                                 command.Parameters.AddWithValue("@productCode", id);
-                                command.Parameters.AddWithValue("@ArchiveID", 0);
+                                command.Parameters.AddWithValue("@Archive", 0);
                                 command.ExecuteNonQuery();
                             }
                             connection.Close();
@@ -83,7 +83,7 @@ namespace InventorySystemGrocery
                 if (MessageBox.Show("Are you sure to delete this permanently?", "Delete the record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     connect.Open();
-                    command = new SqlCommand("delete from Product where ProductCode like '" + DGVProdBin[1, e.RowIndex].Value.ToString() + "'", connect);
+                    command = new SqlCommand("DELETE from Product where ProductCode like '" + DGVProdBin[1, e.RowIndex].Value.ToString() + "'", connect);
                     command.ExecuteNonQuery();
                     connect.Close();
                     MessageBox.Show("The selected record has been successfully deleted.", "Tea Hara", MessageBoxButtons.OK, MessageBoxIcon.Information);

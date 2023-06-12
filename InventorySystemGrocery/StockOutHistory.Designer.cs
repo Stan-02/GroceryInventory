@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockOutHistory));
-            this.DGVinventory = new System.Windows.Forms.DataGridView();
+            this.DGVHisInvent = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,18 +41,17 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearchHistory = new System.Windows.Forms.TextBox();
             this.purchaseSearch = new System.Windows.Forms.Button();
-            this.btnDelCat = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVinventory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVHisInvent)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // DGVinventory
+            // DGVHisInvent
             // 
-            this.DGVinventory.AllowUserToAddRows = false;
-            this.DGVinventory.BackgroundColor = System.Drawing.Color.White;
-            this.DGVinventory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DGVHisInvent.AllowUserToAddRows = false;
+            this.DGVHisInvent.BackgroundColor = System.Drawing.Color.White;
+            this.DGVHisInvent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Aquamarine;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -60,10 +59,10 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVinventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DGVinventory.ColumnHeadersHeight = 34;
-            this.DGVinventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DGVinventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGVHisInvent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGVHisInvent.ColumnHeadersHeight = 34;
+            this.DGVHisInvent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DGVHisInvent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column3,
             this.Column7,
@@ -79,15 +78,15 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Cyan;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVinventory.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DGVinventory.EnableHeadersVisualStyles = false;
-            this.DGVinventory.Location = new System.Drawing.Point(0, 54);
-            this.DGVinventory.Name = "DGVinventory";
-            this.DGVinventory.RowHeadersVisible = false;
-            this.DGVinventory.RowHeadersWidth = 62;
-            this.DGVinventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVinventory.Size = new System.Drawing.Size(1171, 366);
-            this.DGVinventory.TabIndex = 15;
+            this.DGVHisInvent.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DGVHisInvent.EnableHeadersVisualStyles = false;
+            this.DGVHisInvent.Location = new System.Drawing.Point(0, 54);
+            this.DGVHisInvent.Name = "DGVHisInvent";
+            this.DGVHisInvent.RowHeadersVisible = false;
+            this.DGVHisInvent.RowHeadersWidth = 62;
+            this.DGVHisInvent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGVHisInvent.Size = new System.Drawing.Size(1171, 366);
+            this.DGVHisInvent.TabIndex = 15;
             // 
             // Column1
             // 
@@ -154,21 +153,21 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtSearchHistory);
             this.panel3.Controls.Add(this.purchaseSearch);
             this.panel3.Location = new System.Drawing.Point(7, 5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(377, 41);
             this.panel3.TabIndex = 19;
             // 
-            // textBox1
+            // txtSearchHistory
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(41, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(327, 26);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.Text = "Search";
+            this.txtSearchHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchHistory.Location = new System.Drawing.Point(41, 9);
+            this.txtSearchHistory.Name = "txtSearchHistory";
+            this.txtSearchHistory.Size = new System.Drawing.Size(327, 26);
+            this.txtSearchHistory.TabIndex = 12;
+            this.txtSearchHistory.Text = "Search";
             // 
             // purchaseSearch
             // 
@@ -182,28 +181,17 @@
             this.purchaseSearch.TabIndex = 12;
             this.purchaseSearch.UseVisualStyleBackColor = true;
             // 
-            // btnDelCat
-            // 
-            this.btnDelCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelCat.Image = ((System.Drawing.Image)(resources.GetObject("btnDelCat.Image")));
-            this.btnDelCat.Location = new System.Drawing.Point(1050, 21);
-            this.btnDelCat.Name = "btnDelCat";
-            this.btnDelCat.Size = new System.Drawing.Size(28, 32);
-            this.btnDelCat.TabIndex = 20;
-            this.btnDelCat.UseVisualStyleBackColor = true;
-            // 
             // StockOutHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(1080, 421);
-            this.Controls.Add(this.btnDelCat);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.DGVinventory);
+            this.Controls.Add(this.DGVHisInvent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StockOutHistory";
-            ((System.ComponentModel.ISupportInitialize)(this.DGVinventory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVHisInvent)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -212,9 +200,9 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView DGVinventory;
+        private System.Windows.Forms.DataGridView DGVHisInvent;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearchHistory;
         private System.Windows.Forms.Button purchaseSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -224,6 +212,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.Button btnDelCat;
     }
 }

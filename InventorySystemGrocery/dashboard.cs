@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
@@ -14,10 +15,14 @@ namespace InventorySystemGrocery
 {
     public partial class dashboard : Form
     {
-        
+        SqlConnection connect = new SqlConnection();
+        SqlCommand command = new SqlCommand();
+        DatabaseConnection dbcon = new DatabaseConnection();
+
         public dashboard()
         {
             InitializeComponent();
+            connect = new SqlConnection(dbcon.connectdb());
             
         }
         //load form to main panel

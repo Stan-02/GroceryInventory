@@ -24,6 +24,7 @@ namespace InventorySystemGrocery
             loadCategory();
         }
 
+        //Created Methods
         public void loadCategory()
         {
             int i = 0;
@@ -41,7 +42,7 @@ namespace InventorySystemGrocery
             connect.Close();
         }
 
-       
+       //end of created Methods
 
         private void DGVCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -70,15 +71,18 @@ namespace InventorySystemGrocery
             }
             loadCategory();
         }
-        private void btnCatExit_Click(object sender, EventArgs e)
-        {
-            Dispose();
-        }
+       
 
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
             AddCategory addCateg = new AddCategory();
             addCateg.Show();
+        } 
+        private void btnCatExit_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
-    }
 }
+
+    } 
+       

@@ -130,7 +130,7 @@
   <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="ProductCode.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="Column9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -160,7 +160,7 @@
   <data name="Restore.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAAXJJREFUSEvllU0rRFEYgMdXWVD8AilfycYCZSE2/oWSvZRSVnYkfgJbJBtlaSE7
+        wAAADsABataJCQAAAXJJREFUSEvllU0rRFEYgMdXWVD8AilfycYCZSE2/oWSvZRSVnYkfgJbJBtlaSE7
         H0tkSSRlRfKx8PU8Z2YkuTPnMlbz1NOd99z3fc/p3nPPZMqa6tz1X6jDWVwPUYmpwBG8wnc8wjHswSos
         CVNo85904mmsxT8zjMdo4xOcwx18/TLWiqloxv7sz0984eO4HKIs7biNTnSN1kXhcz7Ee+xwoAiVuIRO
         dIBR72kU8wWx29W8PbTO+qLso8lDIYpnAK1zsoI04hteols3DeZfoJvBPon0oavZClF6NtH63hAlMIgm
@@ -175,7 +175,7 @@
   <data name="Delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAASVJREFUSEvtlrFKA0EURbdWsLFKZ2XpJwT7fIPYpxTtlHxBupQh6W39B7FLQO2t
+        vAAADrwBlbxySQAAASVJREFUSEvtlrFKA0EURbdWsLFKZ2XpJwT7fIPYpxTtlHxBupQh6W39B7FLQO2t
         7AVJG+95w5Nh2dmZOIIWuXCY3DfvzmMJyWzzXzQWn2LTAXX2q3Uvtj2wXy0fcidOIvA/GjIRL+I14kNw
         2HtUAzx19uM6ec5J6kkQrIVzkjoW578A5/TqQizEgbly0U+OfFbPgkcemisX/eTIZ8WXRzOP7ToTMzEw
         F1Y8dRf95Mhn1TVkLqhdmQsrnrqreshSULsxF1Y8ddd+yLf2Q5LqGsIvmdq1ubDiqbuqh/D5QZyaCyu+

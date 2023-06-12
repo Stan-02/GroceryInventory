@@ -16,20 +16,13 @@ namespace InventorySystemGrocery
         SqlConnection connect = new SqlConnection();
         SqlCommand command = new SqlCommand();
         DatabaseConnection dbcon = new DatabaseConnection();
+        CategoryList catlist = new CategoryList();
+
         public AddCategory()
         {
             InitializeComponent();
             connect = new SqlConnection(dbcon.connectdb());
             catlist.loadCategory();
-        }
-
-        CategoryList catlist = new CategoryList();
-
-        private void btnCatExit_Click(object sender, EventArgs e)
-        {
-                Dispose();
-            CategoryList catlist = new CategoryList();
-            catlist.Refresh();
         }
 
         private void btnAddCat_Click(object sender, EventArgs e)
@@ -52,34 +45,17 @@ namespace InventorySystemGrocery
                         command.ExecuteNonQuery();
                         connect.Close();
                         MessageBox.Show("Category has been successfully added!");
-                        Clear();
-                        
-                        
-
+                        Clear();                       
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }
-            //CategoryList catlist = new CategoryList();
-            //catlist.loadCategory();
-            
+            }       
         }
 
-        private void Clear()
-        {
-            txtCategory.Clear();
-        }
-
-        private void btnClearCat_Click(object sender, EventArgs e)
-        {
-            Clear();
-            btnAddCat.Enabled = true;
-            btnUpdate.Enabled = false;
-        }
-
+       
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -101,7 +77,24 @@ namespace InventorySystemGrocery
             {
                 MessageBox.Show(ex.Message);
             }
-            
+        }
+
+        private void btnClearCat_Click(object sender, EventArgs e)
+        {
+            Clear();
+            btnAddCat.Enabled = true;
+            btnUpdate.Enabled = false;
+        } 
+
+        private void btnCatExit_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        } 
+
+        //Created Method
+        private void Clear()
+        {
+            txtCategory.Clear();
         }
     }
 }

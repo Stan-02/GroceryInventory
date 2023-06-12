@@ -43,7 +43,7 @@ namespace InventorySystemGrocery
             connect.Close();
         }
         
-        int qty = 0;
+        int qty = 1;
 
         private void DGVinventory_CellClick(object sender, DataGridViewCellEventArgs e)
         {

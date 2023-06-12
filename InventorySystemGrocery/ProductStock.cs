@@ -28,6 +28,7 @@ namespace InventorySystemGrocery
          
         }
         
+        //Created Methods
         public void loadProduct()
         {
             int i = 0;
@@ -62,6 +63,8 @@ namespace InventorySystemGrocery
             reader.Close();
             connect.Close();
         }
+     
+        //End of Created Methods
 
         private void DGVPurchaselist_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -95,20 +98,20 @@ namespace InventorySystemGrocery
                         int id = Convert.ToInt32(DGVPurchaselist.Rows[e.RowIndex].Cells["ProductCode"].Value);
                         using (SqlConnection connection = new SqlConnection(dbcon.connectdb()))
                         {
-                            connection.Open();
-                            using (SqlCommand command = new SqlCommand("UPDATE Product SET ArchiveID = 1 WHERE ProductCode = @productCode", connection))
+                            connect.Open();
+                            using (SqlCommand command = new SqlCommand("UPDATE Product SET Archive = 1 WHERE ProductCode = @productCode", connect))
                             {
                                 command.Parameters.AddWithValue("@productCode", id);
                                 command.ExecuteNonQuery();
                             }
-                            connection.Close();
+                            connect.Close();
                         }
                         DGVPurchaselist.Rows.RemoveAt(e.RowIndex);
-
+                        
                     }
                 }
             }
-            loadProduct();
+            
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -120,6 +123,29 @@ namespace InventorySystemGrocery
         {
             RecycleBinProduct arhvProd = new RecycleBinProduct();
             arhvProd.Show();
+        }
+
+        private void DGVPurchaselist_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+            int i = DGVPurchaselist.CurrentRow.Index;
+            Register addprod = new Register();
+            addprod.txtProductCode.Text = DGVPurchaselist[1, i].Value.ToString();
+            addprod.txtProductName.Text = DGVPurchaselist[2, i].Value.ToString();
+            addprod.txtProductDesc.Text = DGVPurchaselist[3, i].Value.ToString();
+            addprod.cbCategory.Text = DGVPurchaselist[4, i].Value.ToString();
+            addprod.txtQuantity.Text = DGVPurchaselist[5, i].Value.ToString();
+            addprod.txtPrice.Text = DGVPurchaselist[6, i].Value.ToString();
+            addprod.dtpRegDate.Value = Convert.ToDateTime(DGVPurchaselist[7, i].Value.ToString());
+            addprod.dtpExpiration.Value = Convert.ToDateTime(DGVPurchaselist[8, i].Value.ToString());
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+
         }
     }
 }
