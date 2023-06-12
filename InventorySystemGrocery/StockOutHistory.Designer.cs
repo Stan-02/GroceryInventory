@@ -32,13 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockOutHistory));
             this.DGVinventory = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.purchaseSearch = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +40,10 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.purchaseSearch = new System.Windows.Forms.Button();
+            this.btnDelCat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVinventory)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -84,93 +81,13 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGVinventory.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGVinventory.EnableHeadersVisualStyles = false;
-            this.DGVinventory.Location = new System.Drawing.Point(0, 83);
-            this.DGVinventory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DGVinventory.Location = new System.Drawing.Point(0, 54);
             this.DGVinventory.Name = "DGVinventory";
             this.DGVinventory.RowHeadersVisible = false;
             this.DGVinventory.RowHeadersWidth = 62;
             this.DGVinventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVinventory.Size = new System.Drawing.Size(1756, 563);
+            this.DGVinventory.Size = new System.Drawing.Size(1171, 366);
             this.DGVinventory.TabIndex = 15;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.purchaseSearch);
-            this.panel3.Location = new System.Drawing.Point(10, 8);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(566, 63);
-            this.panel3.TabIndex = 19;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(62, 14);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(488, 35);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.Text = "Search";
-            // 
-            // purchaseSearch
-            // 
-            this.purchaseSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.purchaseSearch.FlatAppearance.BorderSize = 0;
-            this.purchaseSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.purchaseSearch.Image = ((System.Drawing.Image)(resources.GetObject("purchaseSearch.Image")));
-            this.purchaseSearch.Location = new System.Drawing.Point(6, 5);
-            this.purchaseSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.purchaseSearch.Name = "purchaseSearch";
-            this.purchaseSearch.Size = new System.Drawing.Size(46, 57);
-            this.purchaseSearch.TabIndex = 12;
-            this.purchaseSearch.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(928, 34);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(222, 27);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Filter by Date:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1162, 29);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(139, 33);
-            this.dateTimePicker1.TabIndex = 23;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(1467, 32);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(90, 34);
-            this.btnAdd.TabIndex = 30;
-            this.btnAdd.Text = "Search";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(1312, 29);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(139, 33);
-            this.dateTimePicker3.TabIndex = 31;
             // 
             // Column1
             // 
@@ -234,26 +151,62 @@
             this.Column8.Name = "Column8";
             this.Column8.Width = 150;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.purchaseSearch);
+            this.panel3.Location = new System.Drawing.Point(7, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(377, 41);
+            this.panel3.TabIndex = 19;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(41, 9);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(327, 26);
+            this.textBox1.TabIndex = 12;
+            this.textBox1.Text = "Search";
+            // 
+            // purchaseSearch
+            // 
+            this.purchaseSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.purchaseSearch.FlatAppearance.BorderSize = 0;
+            this.purchaseSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.purchaseSearch.Image = ((System.Drawing.Image)(resources.GetObject("purchaseSearch.Image")));
+            this.purchaseSearch.Location = new System.Drawing.Point(4, 3);
+            this.purchaseSearch.Name = "purchaseSearch";
+            this.purchaseSearch.Size = new System.Drawing.Size(31, 37);
+            this.purchaseSearch.TabIndex = 12;
+            this.purchaseSearch.UseVisualStyleBackColor = true;
+            // 
+            // btnDelCat
+            // 
+            this.btnDelCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelCat.Image = ((System.Drawing.Image)(resources.GetObject("btnDelCat.Image")));
+            this.btnDelCat.Location = new System.Drawing.Point(1050, 21);
+            this.btnDelCat.Name = "btnDelCat";
+            this.btnDelCat.Size = new System.Drawing.Size(28, 32);
+            this.btnDelCat.TabIndex = 20;
+            this.btnDelCat.UseVisualStyleBackColor = true;
+            // 
             // StockOutHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(1756, 648);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label5);
+            this.ClientSize = new System.Drawing.Size(1080, 421);
+            this.Controls.Add(this.btnDelCat);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.DGVinventory);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "StockOutHistory";
             ((System.ComponentModel.ISupportInitialize)(this.DGVinventory)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -263,10 +216,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button purchaseSearch;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
@@ -275,5 +224,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.Button btnDelCat;
     }
 }

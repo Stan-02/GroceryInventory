@@ -1,6 +1,6 @@
 ﻿namespace InventorySystemGrocery
 {
-    partial class ProductStock
+    partial class RecycleBinProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductStock));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecycleBinProduct));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.purchaseSearch = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCatExit = new System.Windows.Forms.Button();
             this.DGVPurchaselist = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,16 +44,22 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Restore = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnDelCat = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVPurchaselist)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVPurchaselist)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkCyan;
+            this.panel2.Controls.Add(this.btnCatExit);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1080, 86);
+            this.panel2.TabIndex = 20;
             // 
             // label2
             // 
@@ -62,43 +67,24 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(393, 18);
+            this.label2.Location = new System.Drawing.Point(400, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 42);
+            this.label2.Size = new System.Drawing.Size(374, 42);
             this.label2.TabIndex = 23;
-            this.label2.Text = "Inventory";
+            this.label2.Text = "Product Recycle Bin";
             // 
-            // txtSearch
+            // btnCatExit
             // 
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(41, 9);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(327, 26);
-            this.txtSearch.TabIndex = 12;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            // 
-            // purchaseSearch
-            // 
-            this.purchaseSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.purchaseSearch.FlatAppearance.BorderSize = 0;
-            this.purchaseSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.purchaseSearch.Image = ((System.Drawing.Image)(resources.GetObject("purchaseSearch.Image")));
-            this.purchaseSearch.Location = new System.Drawing.Point(4, 3);
-            this.purchaseSearch.Name = "purchaseSearch";
-            this.purchaseSearch.Size = new System.Drawing.Size(31, 37);
-            this.purchaseSearch.TabIndex = 12;
-            this.purchaseSearch.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.DGVPurchaselist);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 130);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1080, 468);
-            this.panel1.TabIndex = 20;
+            this.btnCatExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCatExit.FlatAppearance.BorderSize = 0;
+            this.btnCatExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCatExit.Image = ((System.Drawing.Image)(resources.GetObject("btnCatExit.Image")));
+            this.btnCatExit.Location = new System.Drawing.Point(1054, 2);
+            this.btnCatExit.Name = "btnCatExit";
+            this.btnCatExit.Size = new System.Drawing.Size(24, 23);
+            this.btnCatExit.TabIndex = 37;
+            this.btnCatExit.UseVisualStyleBackColor = true;
+            this.btnCatExit.Click += new System.EventHandler(this.btnCatExit_Click);
             // 
             // DGVPurchaselist
             // 
@@ -126,7 +112,7 @@
             this.Column5,
             this.Column7,
             this.Column8,
-            this.Edit,
+            this.Restore,
             this.Delete});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -138,14 +124,13 @@
             this.DGVPurchaselist.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGVPurchaselist.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVPurchaselist.EnableHeadersVisualStyles = false;
-            this.DGVPurchaselist.Location = new System.Drawing.Point(0, 0);
+            this.DGVPurchaselist.Location = new System.Drawing.Point(0, 86);
             this.DGVPurchaselist.Name = "DGVPurchaselist";
             this.DGVPurchaselist.RowHeadersVisible = false;
             this.DGVPurchaselist.RowHeadersWidth = 62;
             this.DGVPurchaselist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVPurchaselist.Size = new System.Drawing.Size(1080, 468);
-            this.DGVPurchaselist.TabIndex = 17;
-            this.DGVPurchaselist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVPurchaselist_CellContentClick);
+            this.DGVPurchaselist.Size = new System.Drawing.Size(1080, 394);
+            this.DGVPurchaselist.TabIndex = 21;
             // 
             // Column1
             // 
@@ -215,14 +200,14 @@
             this.Column8.Name = "Column8";
             this.Column8.Width = 80;
             // 
-            // Edit
+            // Restore
             // 
-            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Edit.HeaderText = "";
-            this.Edit.Image = ((System.Drawing.Image)(resources.GetObject("Edit.Image")));
-            this.Edit.MinimumWidth = 8;
-            this.Edit.Name = "Edit";
-            this.Edit.Width = 8;
+            this.Restore.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Restore.HeaderText = "";
+            this.Restore.Image = ((System.Drawing.Image)(resources.GetObject("Restore.Image")));
+            this.Restore.MinimumWidth = 8;
+            this.Restore.Name = "Restore";
+            this.Restore.Width = 8;
             // 
             // Delete
             // 
@@ -233,68 +218,28 @@
             this.Delete.Name = "Delete";
             this.Delete.Width = 8;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DarkCyan;
-            this.panel2.Controls.Add(this.btnDelCat);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1080, 130);
-            this.panel2.TabIndex = 19;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.txtSearch);
-            this.panel3.Controls.Add(this.purchaseSearch);
-            this.panel3.Location = new System.Drawing.Point(9, 83);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(377, 41);
-            this.panel3.TabIndex = 18;
-            // 
-            // btnDelCat
-            // 
-            this.btnDelCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelCat.Image = ((System.Drawing.Image)(resources.GetObject("btnDelCat.Image")));
-            this.btnDelCat.Location = new System.Drawing.Point(1043, 89);
-            this.btnDelCat.Name = "btnDelCat";
-            this.btnDelCat.Size = new System.Drawing.Size(36, 39);
-            this.btnDelCat.TabIndex = 24;
-            this.btnDelCat.UseVisualStyleBackColor = true;
-            // 
-            // ProductStock
+            // RecycleBinProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 598);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1080, 480);
+            this.Controls.Add(this.DGVPurchaselist);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "ProductStock";
-            this.Text = "ProductStock";
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DGVPurchaselist)).EndInit();
+            this.Name = "RecycleBinProduct";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVPurchaselist)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Button purchaseSearch;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView DGVPurchaselist;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnCatExit;
+        private System.Windows.Forms.DataGridView DGVPurchaselist;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
@@ -304,8 +249,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewImageColumn Edit;
+        private System.Windows.Forms.DataGridViewImageColumn Restore;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
-        private System.Windows.Forms.Button btnDelCat;
     }
 }

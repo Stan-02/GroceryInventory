@@ -1,6 +1,6 @@
 ﻿namespace InventorySystemGrocery
 {
-    partial class CategoryList
+    partial class RecycleBinCategory
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecycleBinCategory));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoryList));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCatExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.DGVCategory = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Restore = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnDelCat = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCategory)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkCyan;
-            this.panel1.Controls.Add(this.btnDelCat);
             this.panel1.Controls.Add(this.btnCatExit);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(629, 63);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 2;
             // 
             // btnCatExit
             // 
@@ -77,19 +73,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(187, 9);
+            this.label1.Location = new System.Drawing.Point(109, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(251, 42);
+            this.label1.Size = new System.Drawing.Size(398, 42);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Category List";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.DGVCategory);
-            this.panel2.Location = new System.Drawing.Point(-1, 63);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(629, 319);
-            this.panel2.TabIndex = 2;
+            this.label1.Text = "Category Recycle Bin";
             // 
             // DGVCategory
             // 
@@ -110,7 +98,7 @@
             this.Column1,
             this.Column3,
             this.Column2,
-            this.Edit,
+            this.Restore,
             this.Delete});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -121,14 +109,13 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGVCategory.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGVCategory.EnableHeadersVisualStyles = false;
-            this.DGVCategory.Location = new System.Drawing.Point(1, 0);
+            this.DGVCategory.Location = new System.Drawing.Point(0, 62);
             this.DGVCategory.Name = "DGVCategory";
             this.DGVCategory.RowHeadersVisible = false;
             this.DGVCategory.RowHeadersWidth = 62;
             this.DGVCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVCategory.Size = new System.Drawing.Size(629, 319);
-            this.DGVCategory.TabIndex = 18;
-            this.DGVCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVCategory_CellContentClick);
+            this.DGVCategory.TabIndex = 19;
             // 
             // Column1
             // 
@@ -156,45 +143,29 @@
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             // 
-            // Edit
+            // Restore
             // 
-            this.Edit.HeaderText = "";
-            this.Edit.Image = ((System.Drawing.Image)(resources.GetObject("Edit.Image")));
-            this.Edit.MinimumWidth = 8;
-            this.Edit.Name = "Edit";
-            this.Edit.Width = 150;
+            this.Restore.HeaderText = "";
+            this.Restore.Image = ((System.Drawing.Image)(resources.GetObject("Restore.Image")));
+            this.Restore.Name = "Restore";
             // 
             // Delete
             // 
             this.Delete.HeaderText = "";
             this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
-            this.Delete.MinimumWidth = 8;
             this.Delete.Name = "Delete";
-            this.Delete.Width = 150;
             // 
-            // btnDelCat
-            // 
-            this.btnDelCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelCat.Image = ((System.Drawing.Image)(resources.GetObject("btnDelCat.Image")));
-            this.btnDelCat.Location = new System.Drawing.Point(601, 30);
-            this.btnDelCat.Name = "btnDelCat";
-            this.btnDelCat.Size = new System.Drawing.Size(28, 32);
-            this.btnDelCat.TabIndex = 19;
-            this.btnDelCat.UseVisualStyleBackColor = true;
-            // 
-            // CategoryList
+            // RecycleBinCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 382);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.DGVCategory);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "CategoryList";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Name = "RecycleBinCategory";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGVCategory)).EndInit();
             this.ResumeLayout(false);
 
@@ -205,13 +176,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCatExit;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView DGVCategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewImageColumn Edit;
+        private System.Windows.Forms.DataGridViewImageColumn Restore;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
-        private System.Windows.Forms.Button btnDelCat;
     }
 }
