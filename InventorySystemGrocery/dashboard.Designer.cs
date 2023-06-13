@@ -85,7 +85,7 @@
             this.btnSales.ForeColor = System.Drawing.Color.White;
             this.btnSales.Image = ((System.Drawing.Image)(resources.GetObject("btnSales.Image")));
             this.btnSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSales.Location = new System.Drawing.Point(-3, 432);
+            this.btnSales.Location = new System.Drawing.Point(-3, 439);
             this.btnSales.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSales.Name = "btnSales";
             this.btnSales.Size = new System.Drawing.Size(228, 92);
@@ -104,10 +104,10 @@
             this.btnPurchase.ForeColor = System.Drawing.Color.White;
             this.btnPurchase.Image = ((System.Drawing.Image)(resources.GetObject("btnPurchase.Image")));
             this.btnPurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPurchase.Location = new System.Drawing.Point(6, 345);
+            this.btnPurchase.Location = new System.Drawing.Point(6, 344);
             this.btnPurchase.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPurchase.Name = "btnPurchase";
-            this.btnPurchase.Size = new System.Drawing.Size(219, 78);
+            this.btnPurchase.Size = new System.Drawing.Size(219, 92);
             this.btnPurchase.TabIndex = 5;
             this.btnPurchase.Text = "Purchase";
             this.btnPurchase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -123,7 +123,7 @@
             this.btnInventory.ForeColor = System.Drawing.Color.White;
             this.btnInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnInventory.Image")));
             this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.Location = new System.Drawing.Point(20, 242);
+            this.btnInventory.Location = new System.Drawing.Point(20, 249);
             this.btnInventory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(206, 92);
@@ -142,10 +142,10 @@
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(20, 535);
+            this.btnSettings.Location = new System.Drawing.Point(20, 534);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(195, 82);
+            this.btnSettings.Size = new System.Drawing.Size(195, 92);
             this.btnSettings.TabIndex = 9;
             this.btnSettings.Text = "    Settings";
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -164,7 +164,7 @@
             this.btnHome.Location = new System.Drawing.Point(20, 154);
             this.btnHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(195, 91);
+            this.btnHome.Size = new System.Drawing.Size(195, 92);
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "    Home";
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

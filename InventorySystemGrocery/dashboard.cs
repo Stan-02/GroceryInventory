@@ -91,6 +91,7 @@ namespace InventorySystemGrocery
         private void timer1_Tick(object sender, EventArgs e)
         {
             Settings setdate = new Settings();
+            
             forTimer.Text = DateTime.Now.ToString("dd MMM yyyy hh:mm:ss tt");
           
         }

@@ -68,7 +68,24 @@ namespace InventorySystemGrocery
 
         private void DGVHisInvent_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            loadOrder(); 
+
+            StockOut stockOut = new StockOut();
+            stockOut.lblStockID.Text = DGVHisInvent.Rows[e.RowIndex].Cells[1].Value.ToString();
+            stockOut.txtProdCode.Text = DGVHisInvent.Rows[e.RowIndex].Cells[2].Value.ToString();
+            stockOut.txtProdDesc.Text = DGVHisInvent.Rows[e.RowIndex].Cells[3].Value.ToString();
+            stockOut.numericQty.Value = Convert.ToInt32(DGVHisInvent.Rows[e.RowIndex].Cells[4].Value.ToString());
+            stockOut.txtPrice.Text = DGVHisInvent.Rows[e.RowIndex].Cells[5].Value.ToString();
+            stockOut.dtpOrderDate.Value = Convert.ToDateTime(DGVHisInvent.Rows[e.RowIndex].Cells[6].Value.ToString());
+            stockOut.txtTotal.Text = DGVHisInvent.Rows[e.RowIndex].Cells[7].Value.ToString();
+            
+         
+            stockOut.ShowDialog();
+            //loadOrder(); 
+        }
+
+        private void btnCatExit_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

@@ -74,6 +74,7 @@ namespace InventorySystemGrocery
                             connection.Close();
                         }
                         DGVProdBin.Rows.RemoveAt(e.RowIndex);
+                        
                     }
                 }
 

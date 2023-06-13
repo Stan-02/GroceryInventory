@@ -28,20 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtBackup = new System.Windows.Forms.TextBox();
-            this.btnBrowse = new System.Windows.Forms.Button();
             this.btnBackup = new System.Windows.Forms.Button();
+            this.btnRestor = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtRestore = new System.Windows.Forms.TextBox();
-            this.btnResBrowse = new System.Windows.Forms.Button();
-            this.btnRestore = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.btnSavedt = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -55,7 +52,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1176, 118);
+            this.panel1.Size = new System.Drawing.Size(1199, 118);
             this.panel1.TabIndex = 3;
             // 
             // label1
@@ -64,161 +61,133 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(460, 28);
+            this.label1.Location = new System.Drawing.Point(471, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(314, 64);
             this.label1.TabIndex = 4;
             this.label1.Text = "SETTINGS";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(98, 249);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(616, 48);
-            this.dateTimePicker1.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label2.Location = new System.Drawing.Point(86, 158);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(406, 64);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Date and Time";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(724, 249);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(298, 48);
-            this.dateTimePicker2.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label3.Location = new System.Drawing.Point(86, 334);
+            this.label3.Location = new System.Drawing.Point(205, 88);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(359, 64);
+            this.label3.Size = new System.Drawing.Size(813, 64);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Backup Files";
-            // 
-            // txtBackup
-            // 
-            this.txtBackup.Location = new System.Drawing.Point(18, 31);
-            this.txtBackup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtBackup.Name = "txtBackup";
-            this.txtBackup.Size = new System.Drawing.Size(314, 26);
-            this.txtBackup.TabIndex = 10;
-            // 
-            // btnBrowse
-            // 
-            this.btnBrowse.Location = new System.Drawing.Point(344, 31);
-            this.btnBrowse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(112, 35);
-            this.btnBrowse.TabIndex = 11;
-            this.btnBrowse.Text = "Browse";
-            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.label3.Text = "Backup and Restore Database";
             // 
             // btnBackup
             // 
-            this.btnBackup.Location = new System.Drawing.Point(344, 75);
-            this.btnBackup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBackup.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnBackup.FlatAppearance.BorderSize = 0;
+            this.btnBackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackup.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackup.ForeColor = System.Drawing.Color.White;
+            this.btnBackup.Image = ((System.Drawing.Image)(resources.GetObject("btnBackup.Image")));
+            this.btnBackup.Location = new System.Drawing.Point(313, 181);
             this.btnBackup.Name = "btnBackup";
-            this.btnBackup.Size = new System.Drawing.Size(112, 35);
-            this.btnBackup.TabIndex = 12;
-            this.btnBackup.Text = "Backup";
-            this.btnBackup.UseVisualStyleBackColor = true;
+            this.btnBackup.Size = new System.Drawing.Size(213, 80);
+            this.btnBackup.TabIndex = 52;
+            this.btnBackup.Text = "  Backup";
+            this.btnBackup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBackup.UseVisualStyleBackColor = false;
+            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
+            // 
+            // btnRestor
+            // 
+            this.btnRestor.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnRestor.FlatAppearance.BorderSize = 0;
+            this.btnRestor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestor.ForeColor = System.Drawing.Color.White;
+            this.btnRestor.Image = ((System.Drawing.Image)(resources.GetObject("btnRestor.Image")));
+            this.btnRestor.Location = new System.Drawing.Point(640, 181);
+            this.btnRestor.Name = "btnRestor";
+            this.btnRestor.Size = new System.Drawing.Size(213, 80);
+            this.btnRestor.TabIndex = 51;
+            this.btnRestor.Text = "  Restore";
+            this.btnRestor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRestor.UseVisualStyleBackColor = false;
+            this.btnRestor.Click += new System.EventHandler(this.btnRestor_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnBackup);
-            this.groupBox1.Controls.Add(this.btnBrowse);
-            this.groupBox1.Controls.Add(this.txtBackup);
-            this.groupBox1.Location = new System.Drawing.Point(98, 431);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.btnRestor);
+            this.groupBox1.Location = new System.Drawing.Point(160, 490);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(512, 149);
-            this.groupBox1.TabIndex = 16;
+            this.groupBox1.Size = new System.Drawing.Size(1095, 331);
+            this.groupBox1.TabIndex = 53;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Backup Database";
-            // 
-            // txtRestore
-            // 
-            this.txtRestore.Location = new System.Drawing.Point(16, 29);
-            this.txtRestore.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtRestore.Name = "txtRestore";
-            this.txtRestore.Size = new System.Drawing.Size(314, 26);
-            this.txtRestore.TabIndex = 13;
-            this.txtRestore.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // btnResBrowse
-            // 
-            this.btnResBrowse.Location = new System.Drawing.Point(342, 25);
-            this.btnResBrowse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnResBrowse.Name = "btnResBrowse";
-            this.btnResBrowse.Size = new System.Drawing.Size(112, 35);
-            this.btnResBrowse.TabIndex = 14;
-            this.btnResBrowse.Text = "Browse";
-            this.btnResBrowse.UseVisualStyleBackColor = true;
-            // 
-            // btnRestore
-            // 
-            this.btnRestore.Location = new System.Drawing.Point(342, 69);
-            this.btnRestore.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnRestore.Name = "btnRestore";
-            this.btnRestore.Size = new System.Drawing.Size(112, 35);
-            this.btnRestore.TabIndex = 15;
-            this.btnRestore.Text = "Restore";
-            this.btnRestore.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.groupBox2.Controls.Add(this.btnRestore);
-            this.groupBox2.Controls.Add(this.btnResBrowse);
-            this.groupBox2.Controls.Add(this.txtRestore);
-            this.groupBox2.Location = new System.Drawing.Point(642, 431);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.btnSavedt);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.dtpDate);
+            this.groupBox2.Location = new System.Drawing.Point(160, 153);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(483, 149);
-            this.groupBox2.TabIndex = 17;
+            this.groupBox2.Size = new System.Drawing.Size(955, 331);
+            this.groupBox2.TabIndex = 54;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Restore Database";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label2.Location = new System.Drawing.Point(205, 50);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(406, 64);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Date and Time";
+            // 
+            // dtpDate
+            // 
+            this.dtpDate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDate.Location = new System.Drawing.Point(326, 147);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(616, 48);
+            this.dtpDate.TabIndex = 7;
+            // 
+            // btnSavedt
+            // 
+            this.btnSavedt.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnSavedt.FlatAppearance.BorderSize = 0;
+            this.btnSavedt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSavedt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSavedt.ForeColor = System.Drawing.Color.White;
+            this.btnSavedt.Location = new System.Drawing.Point(521, 221);
+            this.btnSavedt.Name = "btnSavedt";
+            this.btnSavedt.Size = new System.Drawing.Size(240, 80);
+            this.btnSavedt.TabIndex = 53;
+            this.btnSavedt.Text = "Save Date/Time";
+            this.btnSavedt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSavedt.UseVisualStyleBackColor = false;
+            this.btnSavedt.Click += new System.EventHandler(this.btnSavedt_Click);
             // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1176, 632);
+            this.ClientSize = new System.Drawing.Size(1199, 822);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Settings";
@@ -229,24 +198,19 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtBackup;
-        private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.Button btnBackup;
+        private System.Windows.Forms.Button btnRestor;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtRestore;
-        private System.Windows.Forms.Button btnResBrowse;
-        private System.Windows.Forms.Button btnRestore;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnSavedt;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtpDate;
     }
 }

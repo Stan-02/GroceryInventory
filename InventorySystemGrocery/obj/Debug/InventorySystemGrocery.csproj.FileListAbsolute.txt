@@ -80,3 +80,5 @@ C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\
 C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.RecycleBinProduct.resources
 C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.RecycleBinCategory.resources
 C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.RecycleBinProduct.resources
+C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.Backup.resources
+C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.Restore.resources

@@ -108,6 +108,7 @@ namespace InventorySystemGrocery
                         }
                         DGVPurchaselist.Rows.RemoveAt(e.RowIndex);
                         
+                        
                     }
                 }
             }
@@ -130,16 +131,16 @@ namespace InventorySystemGrocery
             try
             {
 
-            int i = DGVPurchaselist.CurrentRow.Index;
-            Register addprod = new Register();
-            addprod.txtProductCode.Text = DGVPurchaselist[1, i].Value.ToString();
-            addprod.txtProductName.Text = DGVPurchaselist[2, i].Value.ToString();
-            addprod.txtProductDesc.Text = DGVPurchaselist[3, i].Value.ToString();
-            addprod.cbCategory.Text = DGVPurchaselist[4, i].Value.ToString();
-            addprod.txtQuantity.Text = DGVPurchaselist[5, i].Value.ToString();
-            addprod.txtPrice.Text = DGVPurchaselist[6, i].Value.ToString();
-            addprod.dtpRegDate.Value = Convert.ToDateTime(DGVPurchaselist[7, i].Value.ToString());
-            addprod.dtpExpiration.Value = Convert.ToDateTime(DGVPurchaselist[8, i].Value.ToString());
+                int i =  DGVPurchaselist.CurrentRow.Index;
+                Register addprod = new Register();
+                addprod.txtProductCode.Text = DGVPurchaselist[1, i].Value.ToString();
+                addprod.txtProductName.Text = DGVPurchaselist[2, i].Value.ToString();
+                addprod.txtProductDesc.Text = DGVPurchaselist[3, i].Value.ToString();
+                addprod.cbCategory.Text = DGVPurchaselist[4, i].Value.ToString();
+                addprod.txtQuantity.Text = DGVPurchaselist[5, i].Value.ToString();
+                addprod.txtPrice.Text = DGVPurchaselist[6, i].Value.ToString();
+                addprod.dtpRegDate.Value = Convert.ToDateTime(DGVPurchaselist[7, i].Value.ToString());
+                addprod.dtpExpiration.Value = Convert.ToDateTime(DGVPurchaselist[8, i].Value.ToString());
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);

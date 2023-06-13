@@ -45,85 +45,57 @@ namespace InventorySystemGrocery
             username.Focus();
         }
 
-       
-    
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string _username = "";
-            string _password = "";
-            bool found = false;
-            try
+          
+            //Logging in
+            if (username.Text != "" & password.Text != "")
             {
-                connect.Open();
-                command = new SqlCommand("select * from tblAccount where UserName = @username and Password = @password", connect);
-                command.Parameters.AddWithValue("@userName", username.Text);
-                command.Parameters.AddWithValue("@password", password.Text);
-
-
-                reader = command.ExecuteReader();
-                reader.Read();
                
-                /*if (reader.HasRows)
+                command = new SqlCommand("SELECT COUNT(*) FROM tblAccount "+ "WHERE UserName = @userName COLLATE SQL_Latin1_General_CP1_CS_AS AND Password = @userPassword COLLATE SQL_Latin1_General_CP1_CS_AS", connect);
                 {
-                    _username = reader["username"].ToString();
-                _password = reader["password"].ToString();
+                    connect.Open();
+                    command.Parameters.AddWithValue("@userName", username.Text);
+                    command.Parameters.AddWithValue("@userPassword", password.Text);
 
-                    found = true;
-                }
-                else
-                {
-                    found = true;
-                }*/
-
-                if (username.Text == _username && password.Text == _password) 
-                {
-                    MessageBox.Show("Logging in", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    username.Clear();
-                    password.Clear();
-                    this.Hide();
-                    dashboard main = new dashboard();
-                    main.Show();
-
-                    //MessageBox.Show("Invalid username or password", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    
-
-                    //MessageBox.Show("Empty field! ", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    connect.Close();
-
-
-                }
-                else if ((username.Text == string.Empty) || (password.Text == string.Empty))
-                {
-                    MessageBox.Show("Empty field! ", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    connect.Close();
-                    //MessageBox.Show("Invalid username or password", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    
-
-                }
-                else
-                {
-                    MessageBox.Show("Invalid username or password ", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    connect.Close();
-                    /*MessageBox.Show("Logging in", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    username.Clear();
-                    password.Clear();
-                    this.Hide();
-                    dashboard main = new dashboard();
-                    main.Show();*/
+                    int result = Convert.ToInt32(command.ExecuteScalar());
+                    if(result > 0)
+                    {
+                        username.Clear();
+                        password.Clear();
+                        this.Hide();
+                        dashboard main = new dashboard();
+                        main.Show();
+                        connect.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        connect.Close();
+                    }
                 }
             }
-            catch(Exception ex)
+            else
             {
+                MessageBox.Show("Empty field! Please input", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 connect.Close();
-                MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void close_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Do you want to exit application? ", "Application", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            Application.Exit();
+            if ( MessageBox.Show("Do you want to exit application? ", "Application", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                Login log = new Login();
+                log.Show();
+            }
+           
+            
         }
     }
 }

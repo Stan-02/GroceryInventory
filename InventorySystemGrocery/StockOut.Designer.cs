@@ -51,6 +51,7 @@
             this.txtSearchProd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.DGVinventory = new System.Windows.Forms.DataGridView();
+            this.lblStockID = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,6 +91,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblStockID);
             this.panel2.Controls.Add(this.numericQty);
             this.panel2.Controls.Add(this.btnclear);
             this.panel2.Controls.Add(this.btnHistory);
@@ -339,6 +341,18 @@
             this.DGVinventory.TabIndex = 14;
             this.DGVinventory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVinventory_CellClick);
             // 
+            // lblStockID
+            // 
+            this.lblStockID.AutoSize = true;
+            this.lblStockID.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStockID.Location = new System.Drawing.Point(304, 885);
+            this.lblStockID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStockID.Name = "lblStockID";
+            this.lblStockID.Size = new System.Drawing.Size(110, 27);
+            this.lblStockID.TabIndex = 33;
+            this.lblStockID.Text = "StockID";
+            this.lblStockID.Visible = false;
+            // 
             // Column1
             // 
             this.Column1.FillWeight = 8.251877F;
@@ -353,14 +367,15 @@
             this.Column3.HeaderText = "Product Code";
             this.Column3.MinimumWidth = 8;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 200;
+            this.Column3.Width = 154;
             // 
             // Column7
             // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column7.HeaderText = "Product Name";
             this.Column7.MinimumWidth = 8;
             this.Column7.Name = "Column7";
-            this.Column7.Width = 200;
+            this.Column7.Width = 158;
             // 
             // Column2
             // 
@@ -368,7 +383,7 @@
             this.Column2.HeaderText = "Product Description";
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 250;
+            this.Column2.Width = 201;
             // 
             // Column4
             // 
@@ -376,7 +391,7 @@
             this.Column4.HeaderText = "Category";
             this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
-            this.Column4.Width = 200;
+            this.Column4.Width = 117;
             // 
             // Column6
             // 
@@ -384,7 +399,7 @@
             this.Column6.HeaderText = "Quantity";
             this.Column6.MinimumWidth = 8;
             this.Column6.Name = "Column6";
-            this.Column6.Width = 150;
+            this.Column6.Width = 111;
             // 
             // Column5
             // 
@@ -423,21 +438,22 @@
         private System.Windows.Forms.TextBox txtSearchProd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView DGVinventory;
-        private System.Windows.Forms.Button btnclear;
-        private System.Windows.Forms.Button btnHistory;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dtpOrderDate;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtProdDesc;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtProdCode;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericQty;
+        public System.Windows.Forms.Button btnclear;
+        public System.Windows.Forms.Button btnHistory;
+        public System.Windows.Forms.Button btnAdd;
+        public System.Windows.Forms.TextBox txtTotal;
+        public System.Windows.Forms.TextBox txtPrice;
+        public System.Windows.Forms.DateTimePicker dtpOrderDate;
+        public System.Windows.Forms.TextBox txtProdDesc;
+        public System.Windows.Forms.TextBox txtProdCode;
+        public System.Windows.Forms.NumericUpDown numericQty;
+        public System.Windows.Forms.Label lblStockID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;

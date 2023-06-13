@@ -17,14 +17,24 @@ namespace InventorySystemGrocery
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+ 
 
+        private void btnRestor_Click(object sender, EventArgs e)
+        {
+            Restore res = new Restore();
+            res.Show();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
 
+        private void btnBackup_Click(object sender, EventArgs e)
+        {
+            Backup bac = new Backup();
+            bac.Show();
+        }
+
+        private void btnSavedt_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("timedate.cpl");
         }
     }
 }

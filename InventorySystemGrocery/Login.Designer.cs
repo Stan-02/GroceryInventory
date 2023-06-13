@@ -39,6 +39,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.lblUserID = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -175,6 +176,20 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // lblUserID
+            // 
+            this.lblUserID.AutoSize = true;
+            this.lblUserID.BackColor = System.Drawing.Color.Transparent;
+            this.lblUserID.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserID.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lblUserID.Location = new System.Drawing.Point(13, 677);
+            this.lblUserID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUserID.Name = "lblUserID";
+            this.lblUserID.Size = new System.Drawing.Size(91, 31);
+            this.lblUserID.TabIndex = 37;
+            this.lblUserID.Text = "UserID";
+            this.lblUserID.Visible = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -184,6 +199,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(651, 717);
             this.ControlBox = false;
+            this.Controls.Add(this.lblUserID);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.close);
             this.Controls.Add(this.showHide);
@@ -219,6 +235,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Label lblUserID;
     }
 }
 
