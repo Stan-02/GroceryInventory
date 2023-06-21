@@ -112,7 +112,14 @@ namespace InventorySystemGrocery
                     }
                 }
             }
-            
+
+
+            if (DGVPurchaselist.Columns["Column6"].Index <= 20)
+            {
+                MessageBox.Show( + " is below threshold");
+
+            }
+
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
