@@ -114,7 +114,7 @@ namespace InventorySystemGrocery
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            
+            load_form(new home());
         }
 
         private void btnSales_Click(object sender, EventArgs e)

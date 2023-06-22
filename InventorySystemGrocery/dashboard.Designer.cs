@@ -59,10 +59,10 @@
             this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 38);
+            this.panel1.Location = new System.Drawing.Point(0, 45);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(243, 654);
+            this.panel1.Size = new System.Drawing.Size(243, 647);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -85,7 +85,7 @@
             this.btnSales.ForeColor = System.Drawing.Color.White;
             this.btnSales.Image = ((System.Drawing.Image)(resources.GetObject("btnSales.Image")));
             this.btnSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSales.Location = new System.Drawing.Point(-3, 439);
+            this.btnSales.Location = new System.Drawing.Point(-3, 435);
             this.btnSales.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSales.Name = "btnSales";
             this.btnSales.Size = new System.Drawing.Size(228, 92);
@@ -104,7 +104,7 @@
             this.btnPurchase.ForeColor = System.Drawing.Color.White;
             this.btnPurchase.Image = ((System.Drawing.Image)(resources.GetObject("btnPurchase.Image")));
             this.btnPurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPurchase.Location = new System.Drawing.Point(6, 344);
+            this.btnPurchase.Location = new System.Drawing.Point(6, 340);
             this.btnPurchase.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPurchase.Name = "btnPurchase";
             this.btnPurchase.Size = new System.Drawing.Size(219, 92);
@@ -123,7 +123,7 @@
             this.btnInventory.ForeColor = System.Drawing.Color.White;
             this.btnInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnInventory.Image")));
             this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.Location = new System.Drawing.Point(20, 249);
+            this.btnInventory.Location = new System.Drawing.Point(20, 245);
             this.btnInventory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(206, 92);
@@ -142,7 +142,7 @@
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(20, 534);
+            this.btnSettings.Location = new System.Drawing.Point(20, 530);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(195, 92);
@@ -161,7 +161,7 @@
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(20, 154);
+            this.btnHome.Location = new System.Drawing.Point(20, 150);
             this.btnHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(195, 92);
@@ -183,7 +183,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1200, 38);
+            this.panel2.Size = new System.Drawing.Size(1200, 45);
             this.panel2.TabIndex = 1;
             // 
             // forTimer
@@ -219,7 +219,7 @@
             this.btnupEnlarge.FlatAppearance.BorderSize = 0;
             this.btnupEnlarge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnupEnlarge.Image = ((System.Drawing.Image)(resources.GetObject("btnupEnlarge.Image")));
-            this.btnupEnlarge.Location = new System.Drawing.Point(1122, 2);
+            this.btnupEnlarge.Location = new System.Drawing.Point(1122, 5);
             this.btnupEnlarge.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnupEnlarge.Name = "btnupEnlarge";
             this.btnupEnlarge.Size = new System.Drawing.Size(36, 35);
@@ -249,10 +249,10 @@
             // mainpanel
             // 
             this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainpanel.Location = new System.Drawing.Point(243, 38);
+            this.mainpanel.Location = new System.Drawing.Point(243, 45);
             this.mainpanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(957, 654);
+            this.mainpanel.Size = new System.Drawing.Size(957, 647);
             this.mainpanel.TabIndex = 2;
             // 
             // dashboard

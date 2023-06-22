@@ -136,7 +136,7 @@ namespace InventorySystemGrocery
             try
             {
 
-                int i = 0;
+                int i;
                 code = DGVPurchaselist[1, i].Value.ToString();
                 pname= DGVPurchaselist[2, i].Value.ToString();
                 pdesc = DGVPurchaselist[3, i].Value.ToString();

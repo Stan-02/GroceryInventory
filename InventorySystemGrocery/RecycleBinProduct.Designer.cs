@@ -90,7 +90,7 @@
             // DGVProdBin
             // 
             this.DGVProdBin.AllowUserToAddRows = false;
-            this.DGVProdBin.BackgroundColor = System.Drawing.Color.White;
+            this.DGVProdBin.BackgroundColor = System.Drawing.Color.Gray;
             this.DGVProdBin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVProdBin.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -162,7 +162,7 @@
             this.Column2.HeaderText = "Product Description";
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 155;
+            this.Column2.Width = 200;
             // 
             // Column4
             // 

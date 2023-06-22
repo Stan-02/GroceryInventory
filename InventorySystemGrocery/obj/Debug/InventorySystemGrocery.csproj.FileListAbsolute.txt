@@ -84,3 +84,4 @@ C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\
 C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.Restore.resources
 C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.Backup.resources
 C:\Users\Christian\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.Restore.resources
+C:\Users\jericho\Source\Repos\GroceryInventory\InventorySystemGrocery\obj\Debug\InventorySystemGrocery.home.resources

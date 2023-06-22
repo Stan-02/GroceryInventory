@@ -32,11 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockOutHistory));
             this.DGVHisInvent = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtSearchHistory = new System.Windows.Forms.TextBox();
-            this.purchaseSearch = new System.Windows.Forms.Button();
-            this.btnCatExit = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +40,11 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtSearchHistory = new System.Windows.Forms.TextBox();
+            this.purchaseSearch = new System.Windows.Forms.Button();
+            this.btnCatExit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGVHisInvent)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -82,7 +82,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGVHisInvent.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGVHisInvent.EnableHeadersVisualStyles = false;
-            this.DGVHisInvent.Location = new System.Drawing.Point(1, 108);
+            this.DGVHisInvent.Location = new System.Drawing.Point(13, 125);
             this.DGVHisInvent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DGVHisInvent.Name = "DGVHisInvent";
             this.DGVHisInvent.RowHeadersVisible = false;
@@ -91,67 +91,6 @@
             this.DGVHisInvent.Size = new System.Drawing.Size(1226, 549);
             this.DGVHisInvent.TabIndex = 15;
             this.DGVHisInvent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVHisInvent_CellContentClick);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel3.Controls.Add(this.txtSearchHistory);
-            this.panel3.Controls.Add(this.purchaseSearch);
-            this.panel3.Location = new System.Drawing.Point(1, 35);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(499, 63);
-            this.panel3.TabIndex = 19;
-            // 
-            // txtSearchHistory
-            // 
-            this.txtSearchHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchHistory.Location = new System.Drawing.Point(62, 14);
-            this.txtSearchHistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtSearchHistory.Name = "txtSearchHistory";
-            this.txtSearchHistory.Size = new System.Drawing.Size(410, 35);
-            this.txtSearchHistory.TabIndex = 12;
-            this.txtSearchHistory.TextChanged += new System.EventHandler(this.txtSearchHistory_TextChanged);
-            // 
-            // purchaseSearch
-            // 
-            this.purchaseSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.purchaseSearch.FlatAppearance.BorderSize = 0;
-            this.purchaseSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.purchaseSearch.Image = ((System.Drawing.Image)(resources.GetObject("purchaseSearch.Image")));
-            this.purchaseSearch.Location = new System.Drawing.Point(12, 3);
-            this.purchaseSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.purchaseSearch.Name = "purchaseSearch";
-            this.purchaseSearch.Size = new System.Drawing.Size(46, 57);
-            this.purchaseSearch.TabIndex = 12;
-            this.purchaseSearch.UseVisualStyleBackColor = true;
-            // 
-            // btnCatExit
-            // 
-            this.btnCatExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCatExit.FlatAppearance.BorderSize = 0;
-            this.btnCatExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCatExit.Image = ((System.Drawing.Image)(resources.GetObject("btnCatExit.Image")));
-            this.btnCatExit.Location = new System.Drawing.Point(1181, -2);
-            this.btnCatExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnCatExit.Name = "btnCatExit";
-            this.btnCatExit.Size = new System.Drawing.Size(46, 43);
-            this.btnCatExit.TabIndex = 37;
-            this.btnCatExit.UseVisualStyleBackColor = true;
-            this.btnCatExit.Click += new System.EventHandler(this.btnCatExit_Click);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(502, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(480, 64);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Stock Out History";
             // 
             // Column1
             // 
@@ -216,6 +155,67 @@
             this.Column8.HeaderText = "Total";
             this.Column8.MinimumWidth = 8;
             this.Column8.Name = "Column8";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel3.Controls.Add(this.txtSearchHistory);
+            this.panel3.Controls.Add(this.purchaseSearch);
+            this.panel3.Location = new System.Drawing.Point(1, 35);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(499, 63);
+            this.panel3.TabIndex = 19;
+            // 
+            // txtSearchHistory
+            // 
+            this.txtSearchHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchHistory.Location = new System.Drawing.Point(62, 14);
+            this.txtSearchHistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSearchHistory.Name = "txtSearchHistory";
+            this.txtSearchHistory.Size = new System.Drawing.Size(410, 35);
+            this.txtSearchHistory.TabIndex = 12;
+            this.txtSearchHistory.TextChanged += new System.EventHandler(this.txtSearchHistory_TextChanged);
+            // 
+            // purchaseSearch
+            // 
+            this.purchaseSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.purchaseSearch.FlatAppearance.BorderSize = 0;
+            this.purchaseSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.purchaseSearch.Image = ((System.Drawing.Image)(resources.GetObject("purchaseSearch.Image")));
+            this.purchaseSearch.Location = new System.Drawing.Point(12, 3);
+            this.purchaseSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.purchaseSearch.Name = "purchaseSearch";
+            this.purchaseSearch.Size = new System.Drawing.Size(46, 57);
+            this.purchaseSearch.TabIndex = 12;
+            this.purchaseSearch.UseVisualStyleBackColor = true;
+            // 
+            // btnCatExit
+            // 
+            this.btnCatExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCatExit.FlatAppearance.BorderSize = 0;
+            this.btnCatExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCatExit.Image = ((System.Drawing.Image)(resources.GetObject("btnCatExit.Image")));
+            this.btnCatExit.Location = new System.Drawing.Point(1181, -2);
+            this.btnCatExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCatExit.Name = "btnCatExit";
+            this.btnCatExit.Size = new System.Drawing.Size(46, 43);
+            this.btnCatExit.TabIndex = 37;
+            this.btnCatExit.UseVisualStyleBackColor = true;
+            this.btnCatExit.Click += new System.EventHandler(this.btnCatExit_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(502, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(480, 64);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Stock Out History";
             // 
             // StockOutHistory
             // 

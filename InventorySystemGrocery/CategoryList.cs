@@ -77,6 +77,7 @@ namespace InventorySystemGrocery
         {
             AddCategory addCateg = new AddCategory();
             addCateg.Show();
+            addCateg.btnUpdate.Enabled = false; 
         } 
         private void btnCatExit_Click(object sender, EventArgs e)
         {
