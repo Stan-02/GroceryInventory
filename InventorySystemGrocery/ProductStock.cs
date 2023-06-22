@@ -18,13 +18,16 @@ namespace InventorySystemGrocery
         SqlCommand command = new SqlCommand();
         DatabaseConnection dbcon = new DatabaseConnection();
         SqlDataReader reader;
+        dashboard dash = new dashboard();
 
+        string code, pname, pdesc, pprice, pqty, pcat, pdate, pExpDate;
         public ProductStock()
         {
             InitializeComponent();
             connect = new SqlConnection(dbcon.connectdb());
             searchItems();
             loadProduct();
+            dash.CheckItemQuantity();
          
         }
         
@@ -98,13 +101,13 @@ namespace InventorySystemGrocery
                         int id = Convert.ToInt32(DGVPurchaselist.Rows[e.RowIndex].Cells["ProductCode"].Value);
                         using (SqlConnection connection = new SqlConnection(dbcon.connectdb()))
                         {
-                            connect.Open();
-                            using (SqlCommand command = new SqlCommand("UPDATE Product SET Archive = 1 WHERE ProductCode = @productCode", connect))
+                            connection.Open();
+                            using (SqlCommand command = new SqlCommand("UPDATE Product SET Archive = 1 WHERE ProductCode = @productCode", connection))
                             {
                                 command.Parameters.AddWithValue("@productCode", id);
                                 command.ExecuteNonQuery();
                             }
-                            connect.Close();
+                            connection.Close();
                         }
                         DGVPurchaselist.Rows.RemoveAt(e.RowIndex);
                         
@@ -114,11 +117,6 @@ namespace InventorySystemGrocery
             }
 
 
-            if (DGVPurchaselist.Columns["Column6"].Index <= 20)
-            {
-                MessageBox.Show( + " is below threshold");
-
-            }
 
         }
 
@@ -138,16 +136,15 @@ namespace InventorySystemGrocery
             try
             {
 
-                int i =  DGVPurchaselist.CurrentRow.Index;
-                Register addprod = new Register();
-                addprod.txtProductCode.Text = DGVPurchaselist[1, i].Value.ToString();
-                addprod.txtProductName.Text = DGVPurchaselist[2, i].Value.ToString();
-                addprod.txtProductDesc.Text = DGVPurchaselist[3, i].Value.ToString();
-                addprod.cbCategory.Text = DGVPurchaselist[4, i].Value.ToString();
-                addprod.txtQuantity.Text = DGVPurchaselist[5, i].Value.ToString();
-                addprod.txtPrice.Text = DGVPurchaselist[6, i].Value.ToString();
-                addprod.dtpRegDate.Value = Convert.ToDateTime(DGVPurchaselist[7, i].Value.ToString());
-                addprod.dtpExpiration.Value = Convert.ToDateTime(DGVPurchaselist[8, i].Value.ToString());
+                int i = 0;
+                code = DGVPurchaselist[1, i].Value.ToString();
+                pname= DGVPurchaselist[2, i].Value.ToString();
+                pdesc = DGVPurchaselist[3, i].Value.ToString();
+                pcat = DGVPurchaselist[4, i].Value.ToString();
+                pqty = DGVPurchaselist[5, i].Value.ToString();
+                pprice = DGVPurchaselist[6, i].Value.ToString();
+                //Convert.ToDateTime(DGVPurchaselist[7, i].Value.ToString(pdate));
+                //Convert.ToDateTime(DGVPurchaselist[8, i].Value.ToString(pExpDate));
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);

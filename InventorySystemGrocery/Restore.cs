@@ -22,15 +22,33 @@ namespace InventorySystemGrocery
             InitializeComponent();
             connect = new SqlConnection(dbcon.connectdb());
         }
+        private void btnPath_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
 
+            ofd.InitialDirectory = @"C:\";
+            ofd.Title = "Browse Text Files";
+
+            ofd.CheckFileExists = true;
+            ofd.CheckPathExists = true;
+
+            ofd.DefaultExt = "BAK";
+            ofd.Filter = "Text files (*.bak)|*.bak";
+            ofd.FilterIndex = 2;
+            ofd.RestoreDirectory = true;
+
+            ofd.ReadOnlyChecked = true;
+            ofd.ShowReadOnly = true;
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                txtLocation.Text = ofd.FileName;
+            }
+        }
         private void btnRestore_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-            }
-            catch
-            {
+          
+            
                 if (MessageBox.Show("Are you want to restore your Database? ", "Restoring the database", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     if ((txtLocation.Text == string.Empty) || (txtDatabase.Text == string.Empty) || (txtServer.Text == string.Empty))
@@ -69,32 +87,9 @@ namespace InventorySystemGrocery
                     }
 
                 }
-            }
+            
         }
 
-        private void btnPath_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-
-            ofd.InitialDirectory = @"C:\";
-            ofd.Title = "Browse Text Files";
-
-            ofd.CheckFileExists = true;
-            ofd.CheckPathExists = true;
-
-            ofd.DefaultExt = "BAK";
-            ofd.Filter = "Text files (*.bak)|*.bak";
-            ofd.FilterIndex = 2;
-            ofd.RestoreDirectory = true;
-
-            ofd.ReadOnlyChecked = true;
-            ofd.ShowReadOnly = true;
-
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                txtLocation.Text = ofd.FileName;
-            }
-        }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {

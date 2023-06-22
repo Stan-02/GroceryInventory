@@ -18,12 +18,14 @@ namespace InventorySystemGrocery
         SqlCommand command = new SqlCommand();
         DatabaseConnection dbcon = new DatabaseConnection();
         SqlDataReader reader;
+        dashboard dash = new dashboard();
         int qty = 0;
         public StockOut()
         {
             InitializeComponent();
             connect = new SqlConnection(dbcon.connectdb());
             viewItemList();
+            dash.CheckItemQuantity();
         }
 
         public void viewItemList()

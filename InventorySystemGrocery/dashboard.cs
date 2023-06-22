@@ -24,6 +24,7 @@ namespace InventorySystemGrocery
             InitializeComponent();
             connect = new SqlConnection(dbcon.connectdb());
             
+            
         }
         //load form to main panel
         public void load_form(object form)
@@ -119,6 +120,32 @@ namespace InventorySystemGrocery
         private void btnSales_Click(object sender, EventArgs e)
         {
             load_form(new StockOut());
+        }
+
+        public void CheckItemQuantity()
+        {
+
+            using (SqlConnection connection = new SqlConnection(dbcon.connectdb()))
+            {
+
+
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT ProductName, Quantity FROM Product", connection);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    string item_name = reader.GetString(0);
+                    int itemQyt = reader.GetInt32(1);
+
+                    if (itemQyt < 10)
+                    {
+                        MessageBox.Show("The stock quantity of " + item_name + " is below threshold", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);             
+                    }
+                }
+
+               
+            }
+           
         }
     }
 }
